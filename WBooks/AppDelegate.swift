@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  BaseProject
+//  WBooks
 //
 //  Created by Guido Marucci Blas on 4/3/16.
 //  Copyright © 2016 Wolox. All rights reserved.
 //
 
 import UIKit
+import Networking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,18 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        if Environment.isTestTarget {
-            return true
-        }
-        
-        /*
-         * Uncomment this and remove this comment once Rollbar service is enabled
-         * and the keys are properly configured in the configuration files.
-         *
-        RollbarService().initialize()
-         *
-         */
-        
+
+        NetworkingBootstrapper.shared.bootstrap()
+
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ViewController()
         window?.makeKeyAndVisible()

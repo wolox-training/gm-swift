@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BaseProject
+//  WBooks
 //
 //  Created by Guido Marucci Blas on 4/3/16.
 //  Copyright © 2016 Wolox. All rights reserved.
@@ -21,11 +21,6 @@ final class ViewController: UIViewController {
         label.textAlignment = .center
         label.sizeToFit()
         view.addSubview(label)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }
