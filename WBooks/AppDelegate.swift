@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkingBootstrapper.shared.bootstrap()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        window?.rootViewController = LibraryViewController()
         window?.makeKeyAndVisible()
         
         return true

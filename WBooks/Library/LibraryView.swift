@@ -19,7 +19,7 @@ class LibraryView: UIView {
     
 }
 
-
+// MARK: - Private
 private extension LibraryView {
     
     func setupView() {
