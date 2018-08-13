@@ -15,7 +15,7 @@ class LibraryViewModel {
         
         let currentDate = Date()
         let year = "2018"
-        let imageUrl = "https://bit.ly/2w5uI0G" // LOTR image
+        let imageUrl = "https://vignette.wikia.nocookie.net/lotr/images/4/45/Cover_lotr_green_gandalf.jpg/revision/latest?cb=20070102112551" // LOTR image
         
         for i in 0..<100 {
             books.append(Book(id: i, author: "Author \(i)", title: "Title \(i)",
