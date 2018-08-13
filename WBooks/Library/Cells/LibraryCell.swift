@@ -1,5 +1,5 @@
 //
-//  LibraryView.swift
+//  LibraryCell.swift
 //  WBooks
 //
 //  Created by Gabriel Leandro Mazzei on 13/8/18.
@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 import WolmoCore
 
-class LibraryView: UIView, NibLoadable {
+class LibraryCell: UITableViewCell, NibLoadable {
     
     //MARK: Properties
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var libraryPhoto: UIImageView!
+    @IBOutlet weak var libraryTitle: UILabel!
+    @IBOutlet weak var libraryAuthor: UILabel!
     
     
     override func awakeFromNib() {
@@ -25,7 +27,7 @@ class LibraryView: UIView, NibLoadable {
 }
 
 // MARK: - Private
-private extension LibraryView {
+private extension LibraryCell {
     
     func setupView() {
         //Init view

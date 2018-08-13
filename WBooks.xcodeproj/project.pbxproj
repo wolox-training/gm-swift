@@ -11,6 +11,10 @@
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
 		09C5B1032121A82B001BE26A /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1022121A82B001BE26A /* LibraryViewController.swift */; };
 		09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1042121A841001BE26A /* LibraryViewModel.swift */; };
+		09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E3E0272121C2DC0001D694 /* LibraryCell.xib */; };
+		09E3E02A2121C2E30001D694 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E0292121C2E30001D694 /* LibraryCell.swift */; };
+		09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E02E2121DC860001D694 /* WBooksRepository.swift */; };
+		09E3E0322121DCBE0001D694 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E0312121DCBE0001D694 /* Book.swift */; };
 		46BEC92C2117C468004338C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91E2117BB4A004338C4 /* Alamofire.framework */; };
 		46BEC92D2117C468004338C4 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91F2117BB4A004338C4 /* AlamofireNetworkActivityIndicator.framework */; };
 		46BEC92E2117C468004338C4 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91C2117BB4A004338C4 /* AlamofireNetworkActivityLogger.framework */; };
@@ -30,7 +34,6 @@
 		46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC9482117C7AE004338C4 /* NetworkingBootstrapper.swift */; };
 		46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC94A2117DA4E004338C4 /* AuthUser.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
-		9D1575071CB1B27500EA395E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575061CB1B27500EA395E /* ViewController.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
 		9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
@@ -78,6 +81,10 @@
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
 		09C5B1022121A82B001BE26A /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		09C5B1042121A841001BE26A /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		09E3E0272121C2DC0001D694 /* LibraryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryCell.xib; sourceTree = "<group>"; };
+		09E3E0292121C2E30001D694 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
+		09E3E02E2121DC860001D694 /* WBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksRepository.swift; sourceTree = "<group>"; };
+		09E3E0312121DCBE0001D694 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		46BEC9192117B6C3004338C4 /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		46BEC91B2117BB4A004338C4 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		46BEC91C2117BB4A004338C4 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
@@ -93,7 +100,6 @@
 		46BEC94A2117DA4E004338C4 /* AuthUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUser.swift; sourceTree = "<group>"; };
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D1575061CB1B27500EA395E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D15750E1CB1B27500EA395E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +163,8 @@
 		09C5B0FD2121A779001BE26A /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				09E3E02D2121DC7B0001D694 /* Repositories */,
+				09E3E0262121C2CF0001D694 /* Cells */,
 				09C5B0FE2121A7E5001BE26A /* LibraryView.xib */,
 				09C5B1002121A80D001BE26A /* LibraryView.swift */,
 				09C5B1022121A82B001BE26A /* LibraryViewController.swift */,
@@ -165,9 +173,19 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
-		46BEC93C2117C6DF004338C4 /* Repositories */ = {
+		09E3E0262121C2CF0001D694 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				09E3E0272121C2DC0001D694 /* LibraryCell.xib */,
+				09E3E0292121C2E30001D694 /* LibraryCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		09E3E02D2121DC7B0001D694 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				09E3E02E2121DC860001D694 /* WBooksRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -177,6 +195,7 @@
 			children = (
 				46BEC9452117C765004338C4 /* User.swift */,
 				46BEC94A2117DA4E004338C4 /* AuthUser.swift */,
+				09E3E0312121DCBE0001D694 /* Book.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,9 +235,7 @@
 				09C5B0FD2121A779001BE26A /* Library */,
 				46BEC9472117C7A3004338C4 /* Bootstrappers */,
 				46BEC93F2117C704004338C4 /* Models */,
-				46BEC93C2117C6DF004338C4 /* Repositories */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
-				9D1575061CB1B27500EA395E /* ViewController.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
 				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
@@ -380,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
+				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
 				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 			);
@@ -452,12 +470,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09E3E02A2121C2E30001D694 /* LibraryCell.swift in Sources */,
 				09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */,
-				9D1575071CB1B27500EA395E /* ViewController.swift in Sources */,
 				09C5B1032121A82B001BE26A /* LibraryViewController.swift in Sources */,
+				09E3E0322121DCBE0001D694 /* Book.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,

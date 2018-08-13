@@ -1,31 +1,29 @@
 //
-//  LibraryView.swift
+//  LibraryViewCell.swift
 //  WBooks
 //
 //  Created by Gabriel Leandro Mazzei on 13/8/18.
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import WolmoCore
 
-class LibraryView: UIView, NibLoadable {
-    
-    //MARK: Properties
-    @IBOutlet weak var tableView: UITableView!
-    
-    
+class LibraryViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupView()
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
     
 }
 
+
 // MARK: - Private
-private extension LibraryView {
+private extension LibraryViewCell {
     
     func setupView() {
         //Init view

@@ -16,16 +16,23 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hola!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Se-tw-ceJ">
-                    <rect key="frame" x="167" y="323" width="40" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-dk-7Cx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KN3-xX-JWv"/>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qrB-nE-3so"/>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="qxA-RN-fQe"/>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vG3-fq-u7H"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tableView" destination="GRc-dk-7Cx" id="yLi-jP-JtX"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
 </document>
