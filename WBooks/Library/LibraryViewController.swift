@@ -15,7 +15,7 @@ class LibraryViewController: UIViewController {
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let cellId = "cellReuseIdentifier"
     private let imagePlaceholder = "image_placeholder"
-    private var libraryData: [Book] = []
+    private let viewModel = LibraryViewModel()
     
     override func loadView() {
         view = libraryView
@@ -23,31 +23,31 @@ class LibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        libraryData = LibraryViewModel().getBooks()
         
         libraryView.tableView.delegate = self
         libraryView.tableView.dataSource = self
         
         libraryView.tableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: cellId)
+        
+        setupBindings()
     }
 }
 
 extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return libraryData.count
+        return viewModel.books.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! LibraryCell
-        let book: Book = libraryData[indexPath.row]
+        let book: Book = viewModel.books.value[indexPath.row]
         
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
         cell.libraryPhoto?.image = UIImage(named: imagePlaceholder)
         
-        if let urlPath = book.getImageUrl() {
-            let url = URL(string: urlPath)!
+        if let url = book.imageURL {
             cell.libraryPhoto?.load(url: url)
         }
         
@@ -60,6 +60,16 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
 }
 
+// MARK: - Private
+private extension LibraryViewController {
+    
+    func setupBindings() {
+        viewModel.books.producer.startWithValues { _ in
+            self.libraryView.tableView.reloadData()
+        }
+    }
+    
+}
 
 private extension UIImageView {
     func load(url: URL) {

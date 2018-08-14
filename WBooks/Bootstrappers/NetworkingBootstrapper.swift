@@ -38,9 +38,9 @@ class NetworkingBootstrapper {
         injectCurrentUserFetcher()
     }
 
-//    func createWBooksRepository() -> WBooksRepository {
-//        return WBooksRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
-//    }
+    func createWBooksRepository() -> WBookRepository {
+        return WBookRepository(networkingConfiguration: networkingConfiguration, sessionManager: _sessionManager)
+    }
 
 }
 

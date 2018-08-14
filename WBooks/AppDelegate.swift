@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkingBootstrapper.shared.bootstrap()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = LibraryViewController()
+        window?.rootViewController = UINavigationController(rootViewController: WBooksTabBarController())
         window?.makeKeyAndVisible()
         
         return true

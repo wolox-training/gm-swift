@@ -7,38 +7,41 @@
 //
 
 import Foundation
+import Argo
+import Runes
+import Curry
 
 struct Book {
     
-    //MARK: Properties
+    // MARK: Properties
     let id: Int
     let author: String
     let title: String
-    let image: [String: String]
-    let publisher: String
+    let imageURL: URL?
     let year: String
     let genre: String
-    let createdAt: Date
-    let updatedAt: Date
     
     
-    init(id: Int, author: String, title: String,
-         image: [String: String], publisher: String, year: String,
-         genre: String, createdAt: Date, updatedAt: Date) {
-        
+    init(id: Int, author: String, title: String, imageURL: String?, year: String, genre: String) {
         self.id = id
         self.author = author
         self.title = title
-        self.image = image
-        self.publisher = publisher
+        self.imageURL = imageURL.map { URL(string: $0)! }
         self.year = year
         self.genre = genre
-        self.createdAt = createdAt
-        self.updatedAt = updatedAt
+    }
+}
+
+extension Book: Argo.Decodable {
+    
+    static func decode(_ json: JSON) -> Decoded<Book> {
+        return curry(Book.init)
+            <^> json <| "id"
+            <*> json <| "author"
+            <*> json <| "title"
+            <*> json <|? "image_url"
+            <*> json <| "year"
+            <*> json <| "genre"
     }
     
-    
-    func getImageUrl() -> String? {
-        return image["url"]
-    }
 }

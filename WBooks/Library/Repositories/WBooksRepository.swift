@@ -8,20 +8,25 @@
 
 import Foundation
 import Networking
+import ReactiveSwift
+import Argo
+import Result
 
 protocol WBookRepositoryType {
     
+    func fetchEntities() -> SignalProducer<[Book], RepositoryError>
+    
 }
 
-class WBookRepository: AbstractRepository {
+class WBookRepository: AbstractRepository, WBookRepositoryType {
     
-//    private static let EntitiesPath = "books"
-//
-//    public func fetchEntities(page: Int) -> SignalProducer<[Book], RepositoryError> {
-//        let path = WBooksDepository.EntitiesPath
-//        return performRequest(method: .get, path: path, parameters: []) {
-//            decode($0).toResult()
-//        }
-//    }
+    private static let EntitiesPath = "books"
+
+    public func fetchEntities() -> SignalProducer<[Book], RepositoryError> {
+        let path = WBookRepository.EntitiesPath
+        return performRequest(method: .get, path: path) {
+            decode($0).toResult()
+        }
+    }
     
 }
