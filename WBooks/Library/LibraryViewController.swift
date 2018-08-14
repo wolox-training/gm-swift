@@ -13,9 +13,9 @@ import WolmoCore
 class LibraryViewController: UIViewController {
     
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
-    private let cellId = "cellReuseIdentifier"
-    private let imagePlaceholder = "image_placeholder"
     private let viewModel = LibraryViewModel()
+    private static let cellId = "cellReuseIdentifier"
+    private static let imagePlaceholder = "image_placeholder"
     
     override func loadView() {
         view = libraryView
@@ -27,7 +27,7 @@ class LibraryViewController: UIViewController {
         libraryView.tableView.delegate = self
         libraryView.tableView.dataSource = self
         
-        libraryView.tableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: cellId)
+        libraryView.tableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: LibraryViewController.cellId)
         
         setupBindings()
     }
@@ -40,12 +40,12 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! LibraryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         let book: Book = viewModel.books.value[indexPath.row]
         
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
-        cell.libraryPhoto?.image = UIImage(named: imagePlaceholder)
+        cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
         
         if let url = book.imageURL {
             cell.libraryPhoto?.load(url: url)

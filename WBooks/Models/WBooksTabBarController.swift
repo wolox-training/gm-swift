@@ -10,8 +10,26 @@ import UIKit
 
 class WBooksTabBarController: UITabBarController {
     
+    private let backgroundColor = UIColor(red: 252, green: 254, blue: 254, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        setupTabs()
+    }
+    
+}
+
+// MARK: - Private
+private extension WBooksTabBarController {
+    
+    func setupView() {
+        tabBar.barTintColor = backgroundColor
+    }
+
+    
+    func setupTabs() {
+        
         let libraryViewController = LibraryViewController()
         let libraryTab = UITabBarItem(title: "Library", image: UIImage(named: "ic_library"), selectedImage: UIImage(named:"ic_library active"))
         libraryViewController.tabBarItem = libraryTab
@@ -35,6 +53,5 @@ class WBooksTabBarController: UITabBarController {
         let tabBarList = [libraryViewController, wishlistViewController, addNewViewController, rentalsViewController]
         viewControllers = tabBarList
     }
-    
     
 }
