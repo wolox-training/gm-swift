@@ -13,7 +13,7 @@ class GradientButton: UIButton {
     
     private static let defaultLeftColor = UIColor(hex: "#00A5E9")! // Blue
     private static let defaultRightColor = UIColor(hex: "#3EBEBF")! // Green
-    private static let defaultRadius: CGFloat = 15.0
+    private static let defaultRadius: CGFloat = 18.0
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -25,7 +25,6 @@ class BookView: UIView, NibLoadable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupView()
     }
     

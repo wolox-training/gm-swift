@@ -69,14 +69,14 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="9Vi-UN-5Ar"/>
                             </constraints>
-                            <state key="normal" title="Add to Wishlist"/>
+                            <state key="normal" title="ADD TO WISHLIST"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-eO-Q9O" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="344" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="SSg-uw-PgK"/>
                             </constraints>
-                            <state key="normal" title="Rent"/>
+                            <state key="normal" title="RENT"/>
                         </button>
                     </subviews>
                     <constraints>
