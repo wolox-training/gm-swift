@@ -12,6 +12,14 @@ import WolmoCore
 
 class BookView: UIView, NibLoadable {
 
+    // MARK: Properties
+    @IBOutlet weak var bookPhoto: UIImageView!
+    @IBOutlet weak var bookTitle: UILabel!
+    @IBOutlet weak var bookStatus: UILabel!
+    @IBOutlet weak var bookAuthor: UILabel!
+    @IBOutlet weak var bookYear: UILabel!
+    @IBOutlet weak var bookGenre: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

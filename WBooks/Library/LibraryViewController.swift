@@ -44,22 +44,20 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         let book: Book = viewModel.books.value[indexPath.row]
         
-        
+        if let url = book.imageURL {
+            cell.libraryPhoto?.load(url: url)
+        }
         
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
-        
-        if let url = book.imageURL {
-            cell.libraryPhoto?.load(url: url)
-        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book: Book = viewModel.books.value[indexPath.row]
-        bookViewController.book = book
+        bookViewController.book.value = book
         self.navigationController?.pushViewController(bookViewController, animated: true)
     }
     
@@ -81,16 +79,5 @@ private extension LibraryViewController {
     
 }
 
-private extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+//TODO: Pasar a otro archivo
+

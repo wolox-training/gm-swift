@@ -99,6 +99,14 @@
                 <constraint firstItem="G3f-0t-8h2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="xtj-qs-lwU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="bookAuthor" destination="tpp-i9-pMV" id="HeA-60-FPL"/>
+                <outlet property="bookGenre" destination="jMv-U2-VEE" id="95i-t5-XqX"/>
+                <outlet property="bookPhoto" destination="ulv-Z5-pzR" id="pEr-1A-bdP"/>
+                <outlet property="bookStatus" destination="gek-iQ-yYs" id="vWS-YW-jJc"/>
+                <outlet property="bookTitle" destination="jd2-OI-hEG" id="tNl-Ep-1Mg"/>
+                <outlet property="bookYear" destination="eno-Tu-alc" id="VWh-ds-PY0"/>
+            </connections>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>
     </objects>
