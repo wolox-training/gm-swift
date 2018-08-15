@@ -14,6 +14,7 @@
 		099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8D21244AB300E4AF20 /* BookViewModel.swift */; };
 		099F0D912124633600E4AF20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* Extensions.swift */; };
 		099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9321246E4400E4AF20 /* GradientButton.swift */; };
+		099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9521248FBA00E4AF20 /* HollowButton.swift */; };
 		09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */; };
 		09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C5B0FE2121A7E5001BE26A /* LibraryView.xib */; };
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
@@ -91,6 +92,7 @@
 		099F0D8D21244AB300E4AF20 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		099F0D902124633600E4AF20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		099F0D9321246E4400E4AF20 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		099F0D9521248FBA00E4AF20 /* HollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowButton.swift; sourceTree = "<group>"; };
 		09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WBooksTabBarController.swift; path = WBooks/Models/WBooksTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		09C5B0FE2121A7E5001BE26A /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				099F0D9321246E4400E4AF20 /* GradientButton.swift */,
+				099F0D9521248FBA00E4AF20 /* HollowButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */,
 				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
 				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
+				099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				09423CFA212309D300825171 /* Test.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,

@@ -19,7 +19,7 @@ class BookView: UIView, NibLoadable {
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookYear: UILabel!
     @IBOutlet weak var bookGenre: UILabel!
-    @IBOutlet weak var addToWishlistButton: UIButton!
+    @IBOutlet weak var addToWishlistButton: HollowButton!
     @IBOutlet weak var rentButton: GradientButton!
     
     

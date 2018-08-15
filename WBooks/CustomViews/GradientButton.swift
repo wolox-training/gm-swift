@@ -14,6 +14,7 @@ class GradientButton: UIButton {
     private static let defaultLeftColor = UIColor(hex: "#00A5E9")! // Blue
     private static let defaultRightColor = UIColor(hex: "#3EBEBF")! // Green
     private static let defaultRadius: CGFloat = 18.0
+    private static let defaultFontSize: CGFloat = 18
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,7 +37,7 @@ private extension GradientButton {
     
     
     func setTextStyle() {
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: GradientButton.defaultFontSize)
         setTitleColor(UIColor.white, for: .normal)
     }
     
