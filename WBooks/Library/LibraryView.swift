@@ -12,7 +12,7 @@ import WolmoCore
 
 class LibraryView: UIView, NibLoadable {
     
-    //MARK: Properties
+    // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
     
     

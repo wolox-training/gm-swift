@@ -13,7 +13,9 @@ import Result
 
 class LibraryViewModel {
     
-    public let books = MutableProperty<[Book]>([])
+    private let mutableBooks = MutableProperty<[Book]>([])
+    public let books : Property<[Book]>
+
     
     private let bookRepository: WBookRepositoryType
     
@@ -32,7 +34,8 @@ class LibraryViewModel {
         }
         */
         
-        books <~ bookRepository.fetchEntities()
+        books = Property(mutableBooks)
+        mutableBooks <~ bookRepository.fetchEntities()
             //.liftError()
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         

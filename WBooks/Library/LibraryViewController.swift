@@ -12,15 +12,19 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     
+    // MARK: Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel = LibraryViewModel()
     private let bookViewController = BookViewController()
+    
     private static let cellId = "cellReuseIdentifier"
     private static let imagePlaceholder = "image_placeholder"
+    
     
     override func loadView() {
         view = libraryView
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,8 @@ class LibraryViewController: UIViewController {
         setupBindings()
     }
 }
+
+
 
 extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -78,6 +84,3 @@ private extension LibraryViewController {
     }
     
 }
-
-//TODO: Pasar a otro archivo
-
