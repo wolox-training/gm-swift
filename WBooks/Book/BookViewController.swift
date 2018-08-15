@@ -32,7 +32,7 @@ private extension BookViewController {
     
     func setupBindings() {
         book.producer.startWithValues({ [unowned self] book in
-            self.setupView(bookItem: book!)
+            self.setupView(book: book!)
         })
     }
     
@@ -40,17 +40,17 @@ private extension BookViewController {
 
 private extension BookViewController {
     
-    func setupView(bookItem: Book) {
+    func setupView(book: Book) {
         bookView.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
         
-        if let url = bookItem.imageURL {
+        if let url = book.imageURL {
             bookView.bookPhoto.load(url: url)
         }
         
-        bookView.bookTitle.text = bookItem.title
-        bookView.bookAuthor.text = bookItem.author
-        bookView.bookGenre.text = bookItem.genre
-        bookView.bookYear.text = bookItem.year
+        bookView.bookTitle.text = book.title
+        bookView.bookAuthor.text = book.author
+        bookView.bookGenre.text = book.genre
+        bookView.bookYear.text = book.year
     }
     
 }
