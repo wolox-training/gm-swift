@@ -13,6 +13,7 @@
 		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
 		099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8D21244AB300E4AF20 /* BookViewModel.swift */; };
 		099F0D912124633600E4AF20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* Extensions.swift */; };
+		099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9321246E4400E4AF20 /* GradientButton.swift */; };
 		09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */; };
 		09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C5B0FE2121A7E5001BE26A /* LibraryView.xib */; };
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
@@ -89,6 +90,7 @@
 		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		099F0D8D21244AB300E4AF20 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		099F0D902124633600E4AF20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		099F0D9321246E4400E4AF20 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WBooksTabBarController.swift; path = WBooks/Models/WBooksTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		09C5B0FE2121A7E5001BE26A /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		099F0D9221246E0900E4AF20 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				099F0D9321246E4400E4AF20 /* GradientButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		09BF01892122FE450098E24E /* TabNavigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +281,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				099F0D9221246E0900E4AF20 /* CustomViews */,
 				099F0D8F2124630700E4AF20 /* Extensions */,
 				099F0D862124489800E4AF20 /* Book */,
 				09BF01892122FE450098E24E /* TabNavigation */,
@@ -525,6 +536,7 @@
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
+				099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */,
 				099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */,
 				099F0D912124633600E4AF20 /* Extensions.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,

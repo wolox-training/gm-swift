@@ -71,7 +71,7 @@
                             </constraints>
                             <state key="normal" title="Add to Wishlist"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-eO-Q9O">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-eO-Q9O" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="50" width="344" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="SSg-uw-PgK"/>
@@ -100,12 +100,14 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="addToWishlistButton" destination="Vg4-YN-79D" id="UGd-Nl-hG8"/>
                 <outlet property="bookAuthor" destination="tpp-i9-pMV" id="HeA-60-FPL"/>
                 <outlet property="bookGenre" destination="jMv-U2-VEE" id="95i-t5-XqX"/>
                 <outlet property="bookPhoto" destination="ulv-Z5-pzR" id="pEr-1A-bdP"/>
                 <outlet property="bookStatus" destination="gek-iQ-yYs" id="vWS-YW-jJc"/>
                 <outlet property="bookTitle" destination="jd2-OI-hEG" id="tNl-Ep-1Mg"/>
                 <outlet property="bookYear" destination="eno-Tu-alc" id="VWh-ds-PY0"/>
+                <outlet property="rentButton" destination="0q8-eO-Q9O" id="YUu-ou-6CK"/>
             </connections>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>

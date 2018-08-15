@@ -19,6 +19,8 @@ class BookView: UIView, NibLoadable {
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookYear: UILabel!
     @IBOutlet weak var bookGenre: UILabel!
+    @IBOutlet weak var addToWishlistButton: UIButton!
+    @IBOutlet weak var rentButton: GradientButton!
     
     
     override func awakeFromNib() {
@@ -34,6 +36,7 @@ private extension BookView {
     
     func setupView() {
         //Init view
+        
     }
     
 }
