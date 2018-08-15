@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
+		099F0D8821244A0800E4AF20 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8721244A0800E4AF20 /* BookView.swift */; };
+		099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099F0D8921244A5300E4AF20 /* BookView.xib */; };
+		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
+		099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8D21244AB300E4AF20 /* BookViewModel.swift */; };
 		09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */; };
 		09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C5B0FE2121A7E5001BE26A /* LibraryView.xib */; };
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
@@ -37,7 +41,6 @@
 		46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BEC94A2117DA4E004338C4 /* AuthUser.swift */; };
 		9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575041CB1B27500EA395E /* AppDelegate.swift */; };
 		9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750B1CB1B27500EA395E /* Assets.xcassets */; };
-		9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */; };
 		9D15751A1CB1B27500EA395E /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575191CB1B27500EA395E /* WBooksTests.swift */; };
 		9D1575251CB1B27500EA395E /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1575241CB1B27500EA395E /* WBooksUITests.swift */; };
 		9D1F7A711CBED81900E20BE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
@@ -80,6 +83,10 @@
 
 /* Begin PBXFileReference section */
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		099F0D8721244A0800E4AF20 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
+		099F0D8921244A5300E4AF20 /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
+		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		099F0D8D21244AB300E4AF20 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
 		09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WBooksTabBarController.swift; path = WBooks/Models/WBooksTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		09C5B0FE2121A7E5001BE26A /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -105,7 +112,6 @@
 		9D1575011CB1B27500EA395E /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575041CB1B27500EA395E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D15750B1CB1B27500EA395E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9D15750E1CB1B27500EA395E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1575101CB1B27500EA395E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1575151CB1B27500EA395E /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1575191CB1B27500EA395E /* WBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksTests.swift; sourceTree = "<group>"; };
@@ -164,6 +170,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		099F0D862124489800E4AF20 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				099F0D8721244A0800E4AF20 /* BookView.swift */,
+				099F0D8921244A5300E4AF20 /* BookView.xib */,
+				099F0D8B21244A8800E4AF20 /* BookViewController.swift */,
+				099F0D8D21244AB300E4AF20 /* BookViewModel.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
 		09BF01892122FE450098E24E /* TabNavigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,13 +261,13 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				099F0D862124489800E4AF20 /* Book */,
 				09BF01892122FE450098E24E /* TabNavigation */,
 				09C5B0FD2121A779001BE26A /* Library */,
 				46BEC9472117C7A3004338C4 /* Bootstrappers */,
 				46BEC93F2117C704004338C4 /* Models */,
 				9D1575041CB1B27500EA395E /* AppDelegate.swift */,
 				9D15750B1CB1B27500EA395E /* Assets.xcassets */,
-				9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */,
 				9D1575101CB1B27500EA395E /* Info.plist */,
 				CEB934DC1D21992100DF75C2 /* Environment.swift */,
 				09423CF9212309D300825171 /* Test.swift */,
@@ -412,8 +429,8 @@
 			files = (
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
 				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
-				9D15750F1CB1B27500EA395E /* LaunchScreen.storyboard in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
+				099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,12 +506,15 @@
 				09C5B1032121A82B001BE26A /* LibraryViewController.swift in Sources */,
 				09E3E0322121DCBE0001D694 /* Book.swift in Sources */,
 				09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */,
+				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
+				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				09423CFA212309D300825171 /* Test.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
+				099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
 			);
@@ -530,17 +550,6 @@
 			targetProxy = 9D1575211CB1B27500EA395E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		9D15750D1CB1B27500EA395E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9D15750E1CB1B27500EA395E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE39E8751D1DAED00004FE95 /* Debug */ = {

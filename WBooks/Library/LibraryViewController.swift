@@ -14,6 +14,7 @@ class LibraryViewController: UIViewController {
     
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel = LibraryViewModel()
+    private let bookViewController = BookViewController()
     private static let cellId = "cellReuseIdentifier"
     private static let imagePlaceholder = "image_placeholder"
     
@@ -43,6 +44,8 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         let book: Book = viewModel.books.value[indexPath.row]
         
+        
+        
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
@@ -53,6 +56,13 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let book: Book = viewModel.books.value[indexPath.row]
+        bookViewController.book = book
+        self.navigationController?.pushViewController(bookViewController, animated: true)
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
