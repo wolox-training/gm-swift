@@ -22,7 +22,8 @@ protocol WBookRepositoryType {
 class WBookRepository: AbstractRepository, WBookRepositoryType {
     
     private static let EntitiesPath = "books"
-
+    private static let CommentsPath = "books/$book_id/comments"
+    
     public func fetchEntities() -> SignalProducer<[Book], RepositoryError> {
         let path = WBookRepository.EntitiesPath
         return performRequest(method: .get, path: path) {
@@ -31,7 +32,7 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
     }
     
     public func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError> {
-        let path = "books/\(book.id)/comments"
+        let path = WBookRepository.CommentsPath.replacingOccurrences(of: "$book_id", with: String(book.id))
         return performRequest(method: .get, path: path) {
             decode($0).toResult()
         }
