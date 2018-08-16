@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
+		097F1ED421259F5F00AE7875 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F1ED321259F5F00AE7875 /* Comment.swift */; };
+		098BBE132125AAD600970C64 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE112125AAD600970C64 /* CommentCell.swift */; };
+		098BBE142125AAD600970C64 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098BBE122125AAD600970C64 /* CommentCell.xib */; };
+		098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE152125C6F100970C64 /* RoundedImageView.swift */; };
 		099F0D8821244A0800E4AF20 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8721244A0800E4AF20 /* BookView.swift */; };
 		099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099F0D8921244A5300E4AF20 /* BookView.xib */; };
 		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
@@ -86,6 +90,10 @@
 
 /* Begin PBXFileReference section */
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		097F1ED321259F5F00AE7875 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		098BBE112125AAD600970C64 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		098BBE122125AAD600970C64 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		098BBE152125C6F100970C64 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		099F0D8721244A0800E4AF20 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		099F0D8921244A5300E4AF20 /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
 		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
@@ -176,9 +184,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		097F1ECE21259CDC00AE7875 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				098BBE112125AAD600970C64 /* CommentCell.swift */,
+				098BBE122125AAD600970C64 /* CommentCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		099F0D862124489800E4AF20 /* Book */ = {
 			isa = PBXGroup;
 			children = (
+				097F1ECE21259CDC00AE7875 /* Cells */,
 				099F0D8721244A0800E4AF20 /* BookView.swift */,
 				099F0D8921244A5300E4AF20 /* BookView.xib */,
 				099F0D8B21244A8800E4AF20 /* BookViewController.swift */,
@@ -200,6 +218,7 @@
 			children = (
 				099F0D9321246E4400E4AF20 /* GradientButton.swift */,
 				099F0D9521248FBA00E4AF20 /* HollowButton.swift */,
+				098BBE152125C6F100970C64 /* RoundedImageView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -215,7 +234,6 @@
 		09C5B0FD2121A779001BE26A /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				09E3E02D2121DC7B0001D694 /* Repositories */,
 				09E3E0262121C2CF0001D694 /* Cells */,
 				09C5B0FE2121A7E5001BE26A /* LibraryView.xib */,
 				09C5B1002121A80D001BE26A /* LibraryView.swift */,
@@ -248,6 +266,7 @@
 				46BEC9452117C765004338C4 /* User.swift */,
 				46BEC94A2117DA4E004338C4 /* AuthUser.swift */,
 				09E3E0312121DCBE0001D694 /* Book.swift */,
+				097F1ED321259F5F00AE7875 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -284,6 +303,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				09E3E02D2121DC7B0001D694 /* Repositories */,
 				099F0D9221246E0900E4AF20 /* CustomViews */,
 				099F0D8F2124630700E4AF20 /* Extensions */,
 				099F0D862124489800E4AF20 /* Book */,
@@ -452,6 +472,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				098BBE142125AAD600970C64 /* CommentCell.xib in Resources */,
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
 				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
@@ -534,8 +555,10 @@
 				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
 				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
 				099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */,
+				098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				09423CFA212309D300825171 /* Test.swift in Sources */,
+				097F1ED421259F5F00AE7875 /* Comment.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
@@ -545,6 +568,7 @@
 				099F0D912124633600E4AF20 /* Extensions.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
+				098BBE132125AAD600970C64 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

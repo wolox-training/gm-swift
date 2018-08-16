@@ -42,6 +42,10 @@ class LibraryViewModel {
     }
     
     
+    func createBookViewModel(book: Book) -> BookViewModel {
+        return BookViewModel(book: book)
+    }
+    
     /*
     func getBooks() -> [Book] {
         var books: [Book] = []

@@ -12,23 +12,6 @@ import WolmoCore
 
 class LibraryView: UIView, NibLoadable {
     
-    // MARK: Properties
     @IBOutlet weak var tableView: UITableView!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setupView()
-    }
-    
-}
-
-// MARK: - Private
-private extension LibraryView {
-    
-    func setupView() {
-        //Init view
-    }
     
 }

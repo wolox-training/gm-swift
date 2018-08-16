@@ -15,6 +15,7 @@ import Result
 protocol WBookRepositoryType {
     
     func fetchEntities() -> SignalProducer<[Book], RepositoryError>
+    func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError>
     
 }
 
@@ -24,6 +25,13 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
 
     public func fetchEntities() -> SignalProducer<[Book], RepositoryError> {
         let path = WBookRepository.EntitiesPath
+        return performRequest(method: .get, path: path) {
+            decode($0).toResult()
+        }
+    }
+    
+    public func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError> {
+        let path = "books/\(book.id)/comments"
         return performRequest(method: .get, path: path) {
             decode($0).toResult()
         }

@@ -12,25 +12,8 @@ import WolmoCore
 
 class LibraryCell: UITableViewCell, NibLoadable {
     
-    //MARK: Properties
     @IBOutlet weak var libraryPhoto: UIImageView!
     @IBOutlet weak var libraryTitle: UILabel!
     @IBOutlet weak var libraryAuthor: UILabel!
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        setupView()
-    }
-    
-}
-
-// MARK: - Private
-private extension LibraryCell {
-    
-    func setupView() {
-        //Init view
-    }
     
 }

@@ -26,7 +26,6 @@ private extension WBooksTabBarController {
     func setupView() {
         tabBar.barTintColor = backgroundColor
     }
-
     
     func setupTabs() {
         

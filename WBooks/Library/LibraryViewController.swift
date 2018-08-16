@@ -14,17 +14,23 @@ class LibraryViewController: UIViewController {
     
     // MARK: Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
-    private let viewModel = LibraryViewModel()
-    private let bookViewController = BookViewController()
+    private let viewModel: LibraryViewModel
     
-    private static let cellId = "cellReuseIdentifier"
+    private static let cellId = "library_view_cell_id"
     private static let imagePlaceholder = "image_placeholder"
+
+    init(viewModel: LibraryViewModel = LibraryViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: .none, bundle: .none)
+    }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func loadView() {
         view = libraryView
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +44,7 @@ class LibraryViewController: UIViewController {
     }
 }
 
-
-
+// MARK: - UITableViewDataSource & UITableViewDelegate
 extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,35 +55,32 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         let book: Book = viewModel.books.value[indexPath.row]
         
+        cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
+        
         if let url = book.imageURL {
             cell.libraryPhoto?.load(url: url)
         }
         
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
-        cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book: Book = viewModel.books.value[indexPath.row]
-        bookViewController.book.value = book
-        self.navigationController?.pushViewController(bookViewController, animated: true)
-    }
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
+        let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
+        navigationController?.pushViewController(bookViewController, animated: true)
     }
     
 }
 
-// MARK: - Private
+// MARK: - Bindings
 private extension LibraryViewController {
     
     func setupBindings() {
-        viewModel.books.producer.startWithValues { _ in
+        viewModel.books.producer.startWithValues { [unowned self] _ in
             self.libraryView.tableView.reloadData()
         }
     }
