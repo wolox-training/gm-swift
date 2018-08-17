@@ -16,4 +16,18 @@ class LibraryCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var libraryTitle: UILabel!
     @IBOutlet weak var libraryAuthor: UILabel!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+}
+
+// MARK: - Private
+private extension LibraryCell {
+    
+    func setupView() {
+        selectionStyle = UITableViewCellSelectionStyle.none
+    }
+    
 }

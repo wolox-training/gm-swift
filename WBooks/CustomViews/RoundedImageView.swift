@@ -34,7 +34,7 @@ class RoundedImageView: UIImageView {
 private extension RoundedImageView {
     
     func setupView() {
-        layer.cornerRadius = 20;
+        layer.cornerRadius = 25;
         layer.masksToBounds = true;
     }
     

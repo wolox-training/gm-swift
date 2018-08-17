@@ -19,6 +19,7 @@ class BookViewController: UIViewController {
     private let viewModel: BookViewModel
     
     private static let imagePlaceholder = "image_placeholder"
+    private static let userPlaceholder = "user_placeholder"
     private static let cellId = "book_view_cell_id"
     
     init(book: Book, viewModel: BookViewModel) {
@@ -83,7 +84,7 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.username.text = "\(user.firstName) \(user.lastName)"
         cell.commentContent.text = comment.content
-        cell.userPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
+        cell.userPhoto.image = UIImage(named: BookViewController.userPlaceholder)
         
         if let url = user.imageURL {
             cell.userPhoto.load(url: url)
