@@ -72,7 +72,8 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
     private static let commentListMaxSize = 5
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.comments.value.count
+        let count = viewModel.comments.value.count
+        return count <= BookViewController.commentListMaxSize ? count : BookViewController.commentListMaxSize
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
