@@ -16,5 +16,20 @@ class CommentCell: UITableViewCell, NibLoadable {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var commentContent: UILabel!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+    
+}
+
+// MARK: - Private
+private extension CommentCell {
+    
+    func setupView() {
+        selectionStyle = UITableViewCellSelectionStyle.none
+    }
+    
 }
 

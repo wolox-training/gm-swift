@@ -19,6 +19,7 @@ class BookViewController: UIViewController {
     private let viewModel: BookViewModel
     
     private static let imagePlaceholder = "image_placeholder"
+    private static let userPlaceholder = "user_placeholder"
     private static let cellId = "book_view_cell_id"
     
     init(book: Book, viewModel: BookViewModel) {
@@ -72,7 +73,8 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
     private static let commentListMaxSize = 5
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.comments.value.count
+        let count = viewModel.comments.value.count
+        return count <= BookViewController.commentListMaxSize ? count : BookViewController.commentListMaxSize
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,7 +84,7 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.username.text = "\(user.firstName) \(user.lastName)"
         cell.commentContent.text = comment.content
-        cell.userPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
+        cell.userPhoto.image = UIImage(named: BookViewController.userPlaceholder)
         
         if let url = user.imageURL {
             cell.userPhoto.load(url: url)

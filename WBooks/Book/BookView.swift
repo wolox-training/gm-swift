@@ -23,7 +23,6 @@ class BookView: UIView, NibLoadable {
     @IBOutlet weak var rentButton: GradientButton!
     @IBOutlet weak var tableView: UITableView!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
@@ -35,7 +34,7 @@ class BookView: UIView, NibLoadable {
 private extension BookView {
     
     func setupView() {
-        //Init view
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     
 }

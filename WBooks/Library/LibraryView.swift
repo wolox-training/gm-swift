@@ -13,5 +13,19 @@ import WolmoCore
 class LibraryView: UIView, NibLoadable {
     
     @IBOutlet weak var tableView: UITableView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupView()
+    }
+    
+}
+
+// MARK: - Private
+private extension LibraryView {
+    
+    func setupView() {
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+    }
     
 }
