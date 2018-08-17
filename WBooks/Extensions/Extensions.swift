@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
+import ReactiveSwift
+import WolmoCore
+import Result
 
+/*
 public extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
@@ -19,6 +23,21 @@ public extension UIImageView {
                     }
                 }
             }
+        }
+    }
+}
+*/
+
+
+public extension UIImageView {
+    func load(url: URL) {
+        
+        let signalProducer = ImageFetcher().fetchImage(url).producer.flatMapError {
+            _ in SignalProducer<UIImage, NoError>.empty
+        }
+        
+        signalProducer.startWithValues { [unowned self] loadedImage in
+            self.image = loadedImage
         }
     }
 }

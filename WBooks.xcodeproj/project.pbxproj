@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
 		097F1ED421259F5F00AE7875 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F1ED321259F5F00AE7875 /* Comment.swift */; };
+		0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988B8F52126EED900A17E9B /* ImageFetcher.swift */; };
 		098BBE132125AAD600970C64 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE112125AAD600970C64 /* CommentCell.swift */; };
 		098BBE142125AAD600970C64 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098BBE122125AAD600970C64 /* CommentCell.xib */; };
 		098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE152125C6F100970C64 /* RoundedImageView.swift */; };
@@ -91,6 +92,7 @@
 /* Begin PBXFileReference section */
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		097F1ED321259F5F00AE7875 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0988B8F52126EED900A17E9B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		098BBE112125AAD600970C64 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		098BBE122125AAD600970C64 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		098BBE152125C6F100970C64 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 				098BBE122125AAD600970C64 /* CommentCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0988B8F42126EEC200A17E9B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0988B8F52126EED900A17E9B /* ImageFetcher.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		099F0D862124489800E4AF20 /* Book */ = {
@@ -303,6 +313,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				0988B8F42126EEC200A17E9B /* Utils */,
 				09E3E02D2121DC7B0001D694 /* Repositories */,
 				099F0D9221246E0900E4AF20 /* CustomViews */,
 				099F0D8F2124630700E4AF20 /* Extensions */,
@@ -559,6 +570,7 @@
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				09423CFA212309D300825171 /* Test.swift in Sources */,
 				097F1ED421259F5F00AE7875 /* Comment.swift in Sources */,
+				0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
