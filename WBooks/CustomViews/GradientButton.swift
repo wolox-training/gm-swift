@@ -16,6 +16,7 @@ class GradientButton: UIButton {
     private static let defaultRadius: CGFloat = 18.0
     private static let defaultFontSize: CGFloat = 18
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -28,20 +29,21 @@ class GradientButton: UIButton {
     
 }
 
-private extension GradientButton {
+
+extension GradientButton {
     
-    func setupView() {
+    public func setupView() {
         setTextStyle()
         setGradient(leftColor: GradientButton.defaultLeftColor, rightColor: GradientButton.defaultRightColor)
     }
     
     
-    func setTextStyle() {
+    private func setTextStyle() {
         titleLabel?.font = UIFont.boldSystemFont(ofSize: GradientButton.defaultFontSize)
         setTitleColor(UIColor.white, for: .normal)
     }
     
-    func setGradient(leftColor: UIColor, rightColor: UIColor) -> Void {
+    private func setGradient(leftColor: UIColor, rightColor: UIColor) -> Void {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
         gradient.colors = [leftColor.cgColor, rightColor.cgColor]

@@ -23,19 +23,4 @@ class BookView: UIView, NibLoadable {
     @IBOutlet weak var rentButton: GradientButton!
     @IBOutlet weak var tableView: UITableView!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupView()
-    }
-    
-}
-
-// MARK: - Private
-private extension BookView {
-    
-    func setupView() {
-        //Init view
-    }
-    
 }
