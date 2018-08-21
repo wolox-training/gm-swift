@@ -23,8 +23,8 @@
                         <constraint firstAttribute="height" constant="130" id="s8K-bB-q2J"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-M7-glh">
-                    <rect key="frame" x="16" y="182" width="343" height="222"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-M7-glh">
+                    <rect key="frame" x="16" y="182" width="343" height="238"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx0-8W-CdO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -33,25 +33,25 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-Nn-ttM" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="48" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="52" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-tZ-kB2" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="96" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="104" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgp-8V-mMO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="144" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="156" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Be5-tb-5kO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="192" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="208" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -66,7 +66,7 @@
                     </constraints>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8p-5t-Yn4" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="16" y="436" width="343" height="50"/>
+                    <rect key="frame" x="16" y="452" width="343" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5FM-AX-B5p"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="oQ7-VK-1eb"/>

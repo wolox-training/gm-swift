@@ -17,7 +17,7 @@ class RecommendationView: UIView, NibLoadable, UIImagePickerControllerDelegate {
     @IBOutlet weak var bookAuthor: SimpleTextField!
     @IBOutlet weak var bookYear: SimpleTextField!
     @IBOutlet weak var bookTopic: SimpleTextField!
-    @IBOutlet weak var bookDescription: UITextField!
+    @IBOutlet weak var bookDescription: SimpleTextField!
     @IBOutlet weak var submitButton: GradientButton!
     @IBOutlet weak var imagePickerButton: UIButton!
     
@@ -37,11 +37,11 @@ class RecommendationView: UIView, NibLoadable, UIImagePickerControllerDelegate {
 private extension RecommendationView {
     
     func setupView() {
-        bookName.placeholder = "Book's name"
-        bookAuthor.placeholder = "Author"
-        bookYear.placeholder = "Year"
-        bookTopic.placeholder = "Topic"
-        bookDescription.placeholder = "Description"
+        bookName.setPlaceholder(text: "Book's name")
+        bookAuthor.setPlaceholder(text: "Author")
+        bookYear.setPlaceholder(text: "Year")
+        bookTopic.setPlaceholder(text: "Topic")
+        bookDescription.setPlaceholder(text: "Description")
     }
     
 }

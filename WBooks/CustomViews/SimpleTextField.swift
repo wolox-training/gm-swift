@@ -6,7 +6,6 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class SimpleTextField: UITextField {
@@ -26,20 +25,20 @@ class SimpleTextField: UITextField {
 private extension SimpleTextField {
     
     func setupView() {
-        font = UIFont(name: font!.fontName, size: 19)
-        //borderStyle = UITextBorderStyle.none
-        //backgroundColor = UIColor.clear
-        underlined()
+        font = UIFont.systemFont(ofSize: 19)
+        borderStyle = UITextBorderStyle.none
+        backgroundColor = UIColor.clear
     }
+}
+
+extension SimpleTextField {
     
-    func underlined(){
-        let border = CALayer()
-        let lineWidth = CGFloat(0.3)
-        border.borderColor = UIColor.black.cgColor
-        border.frame = CGRect(x: 0, y: self.frame.size.height - lineWidth, width:  self.frame.size.width, height: self.frame.size.height)
-        border.borderWidth = lineWidth
-        self.layer.addSublayer(border)
-        self.layer.masksToBounds = true
+    func setPlaceholder(text: String) {
+        let attributes = [
+            NSAttributedStringKey.font : UIFont.italicSystemFont(ofSize: 19)
+        ]
+        
+        attributedPlaceholder = NSAttributedString(string: text, attributes: attributes)
     }
     
 }
