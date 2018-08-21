@@ -6,7 +6,7 @@
 //  Copyright © 2018 Wolox. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import UIKit
 import WolmoCore
 

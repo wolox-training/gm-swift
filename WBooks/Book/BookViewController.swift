@@ -74,12 +74,13 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = viewModel.comments.value.count
-        return count <= BookViewController.commentListMaxSize ? count : BookViewController.commentListMaxSize
+        return min(count, BookViewController.commentListMaxSize)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookViewController.cellId) as! CommentCell
-        let comment = viewModel.comments.value[indexPath.row]
+        let commentList = viewModel.comments.value
+        let comment = commentList[commentList.count - indexPath.row - 1]
         let user = comment.user
         
         cell.username.text = "\(user.firstName) \(user.lastName)"
