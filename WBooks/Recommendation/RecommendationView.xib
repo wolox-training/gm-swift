@@ -50,7 +50,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Be5-tb-5kO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-DE-m6L" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="208" width="343" height="30"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -93,7 +93,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="bookAuthor" destination="nx7-Nn-ttM" id="Aln-Qj-Gbf"/>
-                <outlet property="bookDescription" destination="Be5-tb-5kO" id="UiV-8p-QMV"/>
+                <outlet property="bookDescription" destination="aPy-DE-m6L" id="hFh-uh-3Os"/>
                 <outlet property="bookName" destination="Hx0-8W-CdO" id="rYQ-HD-jy3"/>
                 <outlet property="bookPhoto" destination="9aR-9b-2Fs" id="7An-1O-D36"/>
                 <outlet property="bookTopic" destination="Cgp-8V-mMO" id="fZ7-sM-LqY"/>
