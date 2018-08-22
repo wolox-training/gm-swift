@@ -16,42 +16,57 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="9aR-9b-2Fs">
-                    <rect key="frame" x="16" y="36" width="130" height="130"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_add photo" translatesAutoresizingMaskIntoConstraints="NO" id="9aR-9b-2Fs">
+                    <rect key="frame" x="16" y="44" width="130" height="130"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="i2g-2H-xcn"/>
                         <constraint firstAttribute="height" constant="130" id="s8K-bB-q2J"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ta3-M7-glh">
-                    <rect key="frame" x="16" y="182" width="343" height="238"/>
+                    <rect key="frame" x="16" y="198" width="343" height="313"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hx0-8W-CdO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="TNb-vF-X73"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nx7-Nn-ttM" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="52" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="67" width="343" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="kls-mc-zLg"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-tZ-kB2" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="104" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="134" width="343" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="mu3-er-KsK"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cgp-8V-mMO" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="156" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="201" width="343" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="Wee-dI-yQP"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-DE-m6L" customClass="SimpleTextField" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="208" width="343" height="30"/>
+                            <rect key="frame" x="0.0" y="268" width="343" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="w0Q-Bo-Jqm"/>
+                            </constraints>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
@@ -59,14 +74,14 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKf-xS-M9l">
-                    <rect key="frame" x="16" y="36" width="130" height="130"/>
+                    <rect key="frame" x="16" y="44" width="130" height="130"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="130" id="3qy-9n-2d4"/>
                         <constraint firstAttribute="height" constant="130" id="eMP-td-Quc"/>
                     </constraints>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8p-5t-Yn4" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="16" y="452" width="343" height="50"/>
+                    <rect key="frame" x="16" y="543" width="343" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="5FM-AX-B5p"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="oQ7-VK-1eb"/>
@@ -79,16 +94,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gKf-xS-M9l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="1T5-pv-IzN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="i8p-5t-Yn4" secondAttribute="trailing" constant="16" id="3Ak-x0-Lt2"/>
+                <constraint firstItem="Ta3-M7-glh" firstAttribute="top" secondItem="9aR-9b-2Fs" secondAttribute="bottom" constant="24" id="4nW-gP-tBL"/>
                 <constraint firstItem="Ta3-M7-glh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="74z-Z1-dNf"/>
                 <constraint firstItem="9aR-9b-2Fs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="SOd-mf-vuK"/>
+                <constraint firstItem="gKf-xS-M9l" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="Wah-Es-WrM"/>
                 <constraint firstItem="i8p-5t-Yn4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ZfQ-6l-rjL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ta3-M7-glh" secondAttribute="trailing" constant="16" id="ctR-NY-dNc"/>
                 <constraint firstItem="gKf-xS-M9l" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="eNe-AT-QTG"/>
-                <constraint firstItem="9aR-9b-2Fs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="k8l-nv-acf"/>
                 <constraint firstItem="i8p-5t-Yn4" firstAttribute="top" secondItem="Ta3-M7-glh" secondAttribute="bottom" constant="32" id="rKt-oD-5kk"/>
-                <constraint firstItem="Ta3-M7-glh" firstAttribute="top" secondItem="9aR-9b-2Fs" secondAttribute="bottom" constant="16" id="wWD-hB-kMX"/>
+                <constraint firstItem="9aR-9b-2Fs" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="zhk-w0-Osb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -105,6 +120,6 @@
         </view>
     </objects>
     <resources>
-        <image name="image_placeholder" width="62" height="62"/>
+        <image name="ic_add photo" width="96" height="96"/>
     </resources>
 </document>
