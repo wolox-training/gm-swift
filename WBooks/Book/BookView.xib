@@ -17,14 +17,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ulv-Z5-pzR">
-                    <rect key="frame" x="40" y="144" width="100" height="140"/>
+                    <rect key="frame" x="40" y="139" width="100" height="140"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="IVc-LB-jia"/>
                         <constraint firstAttribute="height" constant="140" id="cZh-Vi-Nnj"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-0t-8h2" userLabel="BookStackView">
-                    <rect key="frame" x="150" y="144" width="234" height="140"/>
+                    <rect key="frame" x="150" y="139" width="234" height="140"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jd2-OI-hEG">
                             <rect key="frame" x="0.0" y="0.0" width="234" height="42.666666666666664"/>
@@ -62,7 +62,7 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-ed-RTx" userLabel="ButtonStackView">
-                    <rect key="frame" x="40" y="309" width="344" height="116"/>
+                    <rect key="frame" x="40" y="304" width="344" height="116"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg4-YN-79D" customClass="HollowButton" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
@@ -81,13 +81,13 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
-                    <rect key="frame" x="0.0" y="465" width="414" height="271"/>
+                    <rect key="frame" x="0.0" y="460" width="414" height="276"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="OWd-MC-6hx">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="120" id="PhH-O5-tGa"/>
+                        <constraint firstAttribute="height" constant="115" id="Z9i-Qs-8lm"/>
                     </constraints>
                 </imageView>
             </subviews>
