@@ -33,8 +33,7 @@ private extension WBooksTabBarController {
         let libraryTab = UITabBarItem(title: "Library", image: UIImage(named: "ic_library"), selectedImage: UIImage(named:"ic_library active"))
         libraryViewController.tabBarItem = libraryTab
         
-        // TODO: Implementar 'Wish List'
-        let wishlistViewController = LibraryViewController()
+        let wishlistViewController = WishlistViewController()
         let wishlistTab = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named:"ic_wishlist active"))
         wishlistViewController.tabBarItem = wishlistTab
         
@@ -43,8 +42,7 @@ private extension WBooksTabBarController {
         let addNewTab = UITabBarItem(title: "Add New", image: UIImage(named: "ic_add new"), selectedImage: UIImage(named:"ic_add new active"))
         addNewViewController.tabBarItem = addNewTab
         
-        // TODO: Implementar 'Rentals'
-        let rentalsViewController = LibraryViewController()
+        let rentalsViewController = RentalsViewController()
         let rentalsTab = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals"), selectedImage: UIImage(named:"ic_myrentals active"))
         rentalsViewController.tabBarItem = rentalsTab
         
