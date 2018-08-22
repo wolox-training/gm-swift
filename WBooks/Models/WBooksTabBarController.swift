@@ -51,6 +51,14 @@ private extension WBooksTabBarController {
         
         let tabBarList = [libraryViewController, wishlistViewController, addNewViewController, rentalsViewController]
         viewControllers = tabBarList
+        navigationItem.title = tabBarList.first!.tabBarItem.title?.uppercased()
+    }
+}
+
+internal extension WBooksTabBarController {
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        navigationItem.title = item.title?.uppercased()
     }
     
 }
