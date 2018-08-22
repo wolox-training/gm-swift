@@ -12,10 +12,19 @@ import WolmoCore
 
 class SuggestionCell: UICollectionViewCell, NibLoadable {
 
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bookPhoto: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupView()
     }
 
+}
+
+private extension SuggestionCell {
+    
+    func setupView() {
+        
+    }
+    
 }

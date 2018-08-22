@@ -38,25 +38,34 @@ class RentalsViewController: UIViewController, UICollectionViewDelegate, UIColle
         rentalsView.suggestionCollectionView.dataSource = self
         
         rentalsView.suggestionCollectionView.register(UINib(nibName: RentalsViewController.cellId, bundle: nil), forCellWithReuseIdentifier: RentalsViewController.cellId)
+        setupBindings()
     }
     
     
 }
 
 
-internal extension RentalsViewController {
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension RentalsViewController {
     
     private static let rentalListMaxSize = 5
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //let count = viewModel.comments.value.count
-        //return min(count, RentalsViewController.rentalListMaxSize)
-        return RentalsViewController.rentalListMaxSize
+        let count = viewModel.bookSuggestions.value.count
+        return min(count, RentalsViewController.rentalListMaxSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RentalsViewController.cellId, for: indexPath) as! SuggestionCell
-        //cell.imageView.image = UIImage(named: RentalsViewController.imagePlaceholder)
+        let book: Book = viewModel.bookSuggestions.value[indexPath.row]
+        
+        cell.bookPhoto.image = UIImage(named: RentalsViewController.imagePlaceholder)
+        
+        if let url = book.imageURL {
+            print("Image URL \(url)")
+            cell.bookPhoto.load(url: url)
+        }
+        
         return cell
     }
     
@@ -78,5 +87,16 @@ internal extension RentalsViewController {
     }
     
     
+    
+}
+
+// MARK: - Bindings
+private extension RentalsViewController {
+    
+    func setupBindings() {
+        viewModel.bookSuggestions.producer.startWithValues { [unowned self] _ in
+            self.rentalsView.suggestionCollectionView.reloadData()
+        }
+    }
     
 }

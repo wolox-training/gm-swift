@@ -19,23 +19,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="76"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="g9t-wk-i9X">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-5Q-oUU">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="76"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="g9t-wk-i9X" secondAttribute="trailing" id="ATe-ua-inx"/>
-                <constraint firstItem="g9t-wk-i9X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HZW-tp-drl"/>
-                <constraint firstAttribute="bottom" secondItem="g9t-wk-i9X" secondAttribute="bottom" id="aFA-Y1-z3b"/>
-                <constraint firstItem="g9t-wk-i9X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oro-pL-Xf3"/>
+                <constraint firstItem="7fE-5Q-oUU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RVw-1q-Kob"/>
+                <constraint firstItem="7fE-5Q-oUU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="U1f-hg-sYr"/>
+                <constraint firstAttribute="bottom" secondItem="7fE-5Q-oUU" secondAttribute="bottom" id="oXK-cz-DOL"/>
+                <constraint firstAttribute="trailing" secondItem="7fE-5Q-oUU" secondAttribute="trailing" id="qAy-gt-hq7"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="50" height="76"/>
+            <connections>
+                <outlet property="bookPhoto" destination="7fE-5Q-oUU" id="A1D-r5-g8S"/>
+            </connections>
             <point key="canvasLocation" x="25" y="65"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="image_placeholder" width="62" height="62"/>
-    </resources>
 </document>
