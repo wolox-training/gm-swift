@@ -15,6 +15,7 @@ import Result
 protocol WBookRepositoryType {
     
     func fetchEntities() -> SignalProducer<[Book], RepositoryError>
+    func fetchEntities(page: Int, amount: Int) -> SignalProducer<[Book], RepositoryError>
     func fetchComments(book: Book) -> SignalProducer<[Comment], RepositoryError>
     
 }
@@ -27,6 +28,14 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
     public func fetchEntities() -> SignalProducer<[Book], RepositoryError> {
         let path = WBookRepository.EntitiesPath
         return performRequest(method: .get, path: path) {
+            decode($0).toResult()
+        }
+    }
+    
+    public func fetchEntities(page: Int, amount: Int) -> SignalProducer<[Book], RepositoryError> {
+        let path = WBookRepository.EntitiesPath
+        let parameters = ["page": page, "amount": amount]
+        return performRequest(method: .get, path: path, parameters: parameters) {
             decode($0).toResult()
         }
     }

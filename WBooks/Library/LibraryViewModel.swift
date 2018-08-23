@@ -15,51 +15,34 @@ class LibraryViewModel {
     
     private let mutableBooks = MutableProperty<[Book]>([])
     public let books : Property<[Book]>
-
+    
+    private var page = 0
+    private static let amountPerPage = 30
     
     private let bookRepository: WBookRepositoryType
     
     init(bookRepository: WBookRepositoryType = NetworkingBootstrapper.shared.createWBooksRepository()) {
         self.bookRepository = bookRepository
         
-        /*
-        bookRepository.fetchEntities().startWithResult { [unowned self] result in
-            switch result {
-            case .success(let books):
-                self.books.value = books
-
-            case .failure(let error):
-                print(error)
-            }
-        }
-        */
-        
         books = Property(mutableBooks)
-        mutableBooks <~ bookRepository.fetchEntities()
-            //.liftError()
+        mutableBooks <~ bookRepository.fetchEntities(page: 0, amount: LibraryViewModel.amountPerPage)
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         
     }
     
+    func fetchMoreBooks() {
+        page += 1
+        let signalProducer: SignalProducer<[Book], NoError> = bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
+            .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
+        
+        signalProducer.startWithValues { [unowned self] loadedBooks: [Book] in
+            self.mutableBooks.value.append(loadedBooks)
+        }
+        
+    }
     
     func createBookViewModel(book: Book) -> BookViewModel {
         return BookViewModel(book: book)
     }
     
-    /*
-    func getBooks() -> [Book] {
-        var books: [Book] = []
-        
-        let year = "2018"
-        let imageUrl = "https://vignette.wikia.nocookie.net/lotr/images/4/45/Cover_lotr_green_gandalf.jpg/revision/latest?cb=20070102112551" // LOTR image
-        
-        for i in 0..<100 {
-            books.append(Book(id: i, author: "Author \(i)", title: "Title \(i)",
-                    imageURL: imageUrl,
-                    year: year, genre: "Genre \(i)"))
-        }
-        
-        return books
-    }
-    */
 }
