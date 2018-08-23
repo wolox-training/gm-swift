@@ -12,6 +12,7 @@ import WolmoCore
 
 class RentalsView: UIView, NibLoadable {
     
+    @IBOutlet weak var rentsTableView: UITableView!
     @IBOutlet weak var suggestionCollectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -25,7 +26,7 @@ class RentalsView: UIView, NibLoadable {
 private extension RentalsView {
     
     func setupView() {
-        
+        rentsTableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     
 }

@@ -15,6 +15,8 @@ class RentalsViewModel {
     
     private let mutableBookSuggestions = MutableProperty<[Book]>([])
     public let bookSuggestions : Property<[Book]>
+    private let mutableRents = MutableProperty<[Rent]>([])
+    public let rents : Property<[Rent]>
     
     private let bookRepository: WBookRepositoryType
     
@@ -28,6 +30,12 @@ class RentalsViewModel {
         mutableBookSuggestions <~ bookRepository.fetchBookSuggestions(book: book)
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         
+        // TODO: Cambiar este usuario por el actualmente logueado
+        let user = User(id: 54, firstName: "", lastName: "", imageURL: nil)
+        
+        rents = Property(mutableRents)
+        mutableRents <~ bookRepository.fetchRents(user: user)
+            .flatMapError { _ in SignalProducer<[Rent], NoError>.empty }
     }
     
     
