@@ -13,6 +13,7 @@
 		098BBE132125AAD600970C64 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE112125AAD600970C64 /* CommentCell.swift */; };
 		098BBE142125AAD600970C64 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098BBE122125AAD600970C64 /* CommentCell.xib */; };
 		098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE152125C6F100970C64 /* RoundedImageView.swift */; };
+		09926D19212F0D15002F9B30 /* WBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09926D18212F0D15002F9B30 /* WBooksViewController.swift */; };
 		099F0D8821244A0800E4AF20 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8721244A0800E4AF20 /* BookView.swift */; };
 		099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099F0D8921244A5300E4AF20 /* BookView.xib */; };
 		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
@@ -96,6 +97,7 @@
 		098BBE112125AAD600970C64 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		098BBE122125AAD600970C64 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		098BBE152125C6F100970C64 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		09926D18212F0D15002F9B30 /* WBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksViewController.swift; sourceTree = "<group>"; };
 		099F0D8721244A0800E4AF20 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		099F0D8921244A5300E4AF20 /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
 		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,14 @@
 				0988B8F52126EED900A17E9B /* ImageFetcher.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		09926D17212F0CF7002F9B30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09926D18212F0D15002F9B30 /* WBooksViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		099F0D862124489800E4AF20 /* Book */ = {
@@ -313,6 +323,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				09926D17212F0CF7002F9B30 /* Controller */,
 				0988B8F42126EEC200A17E9B /* Utils */,
 				09E3E02D2121DC7B0001D694 /* Repositories */,
 				099F0D9221246E0900E4AF20 /* CustomViews */,
@@ -575,6 +586,7 @@
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
+				09926D19212F0D15002F9B30 /* WBooksViewController.swift in Sources */,
 				099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */,
 				099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */,
 				099F0D912124633600E4AF20 /* Extensions.swift in Sources */,

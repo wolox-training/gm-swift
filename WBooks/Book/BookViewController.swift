@@ -12,7 +12,7 @@ import ReactiveSwift
 import WolmoCore
 
 
-class BookViewController: UIViewController {
+class BookViewController: WBooksViewController {
     
     private let bookView: BookView = BookView.loadFromNib()!
     public let book: Book

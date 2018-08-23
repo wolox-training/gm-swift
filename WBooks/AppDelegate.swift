@@ -23,20 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: WBooksTabBarController())
         window?.makeKeyAndVisible()
         
-        setStatusBarStyle()
-        
         return true
     }
     
-    func setStatusBarStyle() {
-        UINavigationBar.appearance().setBackgroundImage(UIImage(),for: .default)
-        UINavigationBar.appearance().shadowImage = UIImage()
-        UINavigationBar.appearance().isTranslucent = true
-        
-        let textAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
-        UINavigationBar.appearance().titleTextAttributes = textAttributes
-        UINavigationBar.appearance().tintColor = UIColor.white
-    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. 
