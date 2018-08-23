@@ -12,11 +12,11 @@ import ReactiveSwift
 import WolmoCore
 
 
-class RecommendationViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RecommendationViewController: UIViewController {
     
     private let recommendationView: RecommendationView = RecommendationView.loadFromNib()!
     private let viewModel: RecommendationViewModel
-    var imagePicker = UIImagePickerController()
+    private let imagePicker = UIImagePickerController()
     
     
     init(viewModel: RecommendationViewModel = RecommendationViewModel()) {
@@ -40,6 +40,7 @@ class RecommendationViewController: UIViewController, UIImagePickerControllerDel
 }
 
 
+// MARK: - Private
 private extension RecommendationViewController {
     
     func setupView() {
@@ -53,13 +54,15 @@ private extension RecommendationViewController {
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
             
-            self.present(imagePicker, animated: true, completion: nil)
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
 }
 
-internal extension RecommendationViewController {
+
+// MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
+extension RecommendationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -70,5 +73,3 @@ internal extension RecommendationViewController {
     }
     
 }
-
-

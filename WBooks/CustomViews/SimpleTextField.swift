@@ -35,14 +35,14 @@ private extension SimpleTextField {
     }
     
     func setBottomBorder() {
-        self.borderStyle = .none
-        self.layer.backgroundColor = UIColor.white.cgColor
+        borderStyle = .none
+        layer.backgroundColor = UIColor.white.cgColor
         
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = SimpleTextField.lineColor.cgColor
-        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 0.0
+        layer.masksToBounds = false
+        layer.shadowColor = SimpleTextField.lineColor.cgColor
+        layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        layer.shadowOpacity = 1.0
+        layer.shadowRadius = 0.0
     }
 }
 
