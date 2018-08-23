@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090F4A45212C5B740084C4EB /* RecommendationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A44212C5B740084C4EB /* RecommendationViewController.swift */; };
+		090F4A47212C5B980084C4EB /* RecommendationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A46212C5B980084C4EB /* RecommendationView.swift */; };
+		090F4A49212C5BB00084C4EB /* RecommendationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 090F4A48212C5BB00084C4EB /* RecommendationView.xib */; };
+		090F4A4B212C5BBE0084C4EB /* RecommendationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A4A212C5BBE0084C4EB /* RecommendationViewModel.swift */; };
+		090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A4C212C61560084C4EB /* SimpleTextField.swift */; };
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
 		097F1ED421259F5F00AE7875 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F1ED321259F5F00AE7875 /* Comment.swift */; };
 		0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988B8F52126EED900A17E9B /* ImageFetcher.swift */; };
@@ -91,6 +96,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		090F4A44212C5B740084C4EB /* RecommendationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewController.swift; sourceTree = "<group>"; };
+		090F4A46212C5B980084C4EB /* RecommendationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationView.swift; sourceTree = "<group>"; };
+		090F4A48212C5BB00084C4EB /* RecommendationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendationView.xib; sourceTree = "<group>"; };
+		090F4A4A212C5BBE0084C4EB /* RecommendationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationViewModel.swift; sourceTree = "<group>"; };
+		090F4A4C212C61560084C4EB /* SimpleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextField.swift; sourceTree = "<group>"; };
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		097F1ED321259F5F00AE7875 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		0988B8F52126EED900A17E9B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
@@ -188,6 +198,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090F4A43212C5B100084C4EB /* Recommendation */ = {
+			isa = PBXGroup;
+			children = (
+				090F4A44212C5B740084C4EB /* RecommendationViewController.swift */,
+				090F4A46212C5B980084C4EB /* RecommendationView.swift */,
+				090F4A48212C5BB00084C4EB /* RecommendationView.xib */,
+				090F4A4A212C5BBE0084C4EB /* RecommendationViewModel.swift */,
+			);
+			path = Recommendation;
+			sourceTree = "<group>";
+		};
 		097F1ECE21259CDC00AE7875 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +260,7 @@
 				099F0D9321246E4400E4AF20 /* GradientButton.swift */,
 				099F0D9521248FBA00E4AF20 /* HollowButton.swift */,
 				098BBE152125C6F100970C64 /* RoundedImageView.swift */,
+				090F4A4C212C61560084C4EB /* SimpleTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -324,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				09926D17212F0CF7002F9B30 /* Controller */,
+				090F4A43212C5B100084C4EB /* Recommendation */,
 				0988B8F42126EEC200A17E9B /* Utils */,
 				09E3E02D2121DC7B0001D694 /* Repositories */,
 				099F0D9221246E0900E4AF20 /* CustomViews */,
@@ -497,6 +520,7 @@
 				098BBE142125AAD600970C64 /* CommentCell.xib in Resources */,
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
 				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
+				090F4A49212C5BB00084C4EB /* RecommendationView.xib in Resources */,
 				9D15750C1CB1B27500EA395E /* Assets.xcassets in Resources */,
 				099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */,
 			);
@@ -571,9 +595,12 @@
 			files = (
 				09E3E02A2121C2E30001D694 /* LibraryCell.swift in Sources */,
 				09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */,
+				090F4A45212C5B740084C4EB /* RecommendationViewController.swift in Sources */,
 				09C5B1032121A82B001BE26A /* LibraryViewController.swift in Sources */,
 				09E3E0322121DCBE0001D694 /* Book.swift in Sources */,
+				090F4A4B212C5BBE0084C4EB /* RecommendationViewModel.swift in Sources */,
 				09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */,
+				090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */,
 				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
 				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
 				099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */,
@@ -585,6 +612,7 @@
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
+				090F4A47212C5B980084C4EB /* RecommendationView.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
 				09926D19212F0D15002F9B30 /* WBooksViewController.swift in Sources */,
 				099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */,

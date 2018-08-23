@@ -65,8 +65,7 @@ private extension WBooksTabBarController {
         let wishlistTab = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named:"ic_wishlist active"))
         wishlistViewController.tabBarItem = wishlistTab
         
-        // TODO: Implementar 'Add New'
-        let addNewViewController = LibraryViewController()
+        let addNewViewController = RecommendationViewController()
         let addNewTab = UITabBarItem(title: "Add New", image: UIImage(named: "ic_add new"), selectedImage: UIImage(named:"ic_add new active"))
         addNewViewController.tabBarItem = addNewTab
         
