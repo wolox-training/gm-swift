@@ -12,7 +12,7 @@ import ReactiveSwift
 import WolmoCore
 
 
-class BookViewController: UIViewController {
+class BookViewController: WBooksViewController {
     
     private let bookView: BookView = BookView.loadFromNib()!
     public let book: Book
@@ -52,7 +52,10 @@ class BookViewController: UIViewController {
 //MARK: - Private
 private extension BookViewController {
     
+    private static let statusBarTitle = "ADD NEW BOOK"
+    
     func setupView() {
+        navigationItem.title = BookViewController.statusBarTitle
         bookView.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
         
         if let url = book.imageURL {
