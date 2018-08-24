@@ -16,8 +16,9 @@ class LibraryViewModel {
     private let mutableBooks = MutableProperty<[Book]>([])
     public let books : Property<[Book]>
     
-    private var page = 0
-    private static let amountPerPage = 30
+    private var thereAreMoreBooks = true
+    private var page = 1
+    private static let amountPerPage = 20
     
     private let bookRepository: WBookRepositoryType
     
@@ -25,20 +26,23 @@ class LibraryViewModel {
         self.bookRepository = bookRepository
         
         books = Property(mutableBooks)
-        mutableBooks <~ bookRepository.fetchEntities(page: 0, amount: LibraryViewModel.amountPerPage)
+        mutableBooks <~ bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         
     }
     
     func fetchMoreBooks() {
-        page += 1
-        let signalProducer: SignalProducer<[Book], NoError> = bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
-            .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
-        
-        signalProducer.startWithValues { [unowned self] loadedBooks: [Book] in
-            self.mutableBooks.value.append(loadedBooks)
+        if thereAreMoreBooks {
+            page += 1
+
+            let signalProducer: SignalProducer<[Book], NoError> = bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
+                .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
+            
+            signalProducer.startWithValues { [unowned self] loadedBooks in
+                self.thereAreMoreBooks = loadedBooks.count == LibraryViewModel.amountPerPage
+                self.mutableBooks.value += loadedBooks
+            }
         }
-        
     }
     
     func createBookViewModel(book: Book) -> BookViewModel {
