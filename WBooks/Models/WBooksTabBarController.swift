@@ -18,6 +18,33 @@ class WBooksTabBarController: UITabBarController {
         setupTabs()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let navigationBar = self.navigationController?.navigationBar
+        
+        navigationBar?.shadowImage = nil
+        navigationBar?.setBackgroundImage(nil, for: .default)
+        navigationBar?.isTranslucent = true
+        
+        navigationBar?.titleTextAttributes = UINavigationBar.appearance().titleTextAttributes
+        navigationBar?.tintColor = UINavigationBar.appearance().tintColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let navigationBar = self.navigationController?.navigationBar
+        
+        navigationBar?.setBackgroundImage(UIImage(), for: .default)
+        navigationBar?.shadowImage = UIImage()
+        navigationBar?.isTranslucent = true
+        
+        let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationBar?.titleTextAttributes = textAttributes
+        navigationBar?.tintColor = UIColor.white
+    }
+    
 }
 
 // MARK: - Private
@@ -37,8 +64,7 @@ private extension WBooksTabBarController {
         let wishlistTab = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named:"ic_wishlist active"))
         wishlistViewController.tabBarItem = wishlistTab
         
-        // TODO: Implementar 'Add New'
-        let addNewViewController = LibraryViewController()
+        let addNewViewController = RecommendationViewController()
         let addNewTab = UITabBarItem(title: "Add New", image: UIImage(named: "ic_add new"), selectedImage: UIImage(named:"ic_add new active"))
         addNewViewController.tabBarItem = addNewTab
         
@@ -49,6 +75,16 @@ private extension WBooksTabBarController {
         
         let tabBarList = [libraryViewController, wishlistViewController, addNewViewController, rentalsViewController]
         viewControllers = tabBarList
+        navigationItem.title = tabBarList.first!.tabBarItem.title?.uppercased()
+    }
+    
+    
+}
+
+internal extension WBooksTabBarController {
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        navigationItem.title = item.title?.uppercased()
     }
     
 }
