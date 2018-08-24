@@ -12,7 +12,7 @@ import WolmoCore
 
 class WishlistViewController: UIViewController {
     
-    private let rentalsView: WishlistView = WishlistView.loadFromNib()!
+    private let wishlistView: WishlistView = WishlistView.loadFromNib()!
     private let viewModel: WishlistViewModel
     
     init(viewModel: WishlistViewModel = WishlistViewModel()) {
@@ -25,7 +25,7 @@ class WishlistViewController: UIViewController {
     }
     
     override func loadView() {
-        view = rentalsView
+        view = wishlistView
     }
     
     override func viewDidLoad() {

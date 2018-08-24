@@ -34,9 +34,10 @@
 		099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099F0D8921244A5300E4AF20 /* BookView.xib */; };
 		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
 		099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8D21244AB300E4AF20 /* BookViewModel.swift */; };
-		099F0D912124633600E4AF20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* Extensions.swift */; };
+		099F0D912124633600E4AF20 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* UIImageViewExtension.swift */; };
 		099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9321246E4400E4AF20 /* GradientButton.swift */; };
 		099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9521248FBA00E4AF20 /* HollowButton.swift */; };
+		09B15CA3213032B1002B8FC3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */; };
 		09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */; };
 		09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C5B0FE2121A7E5001BE26A /* LibraryView.xib */; };
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
@@ -134,9 +135,10 @@
 		099F0D8921244A5300E4AF20 /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
 		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		099F0D8D21244AB300E4AF20 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
-		099F0D902124633600E4AF20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		099F0D902124633600E4AF20 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		099F0D9321246E4400E4AF20 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		099F0D9521248FBA00E4AF20 /* HollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowButton.swift; sourceTree = "<group>"; };
+		09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WBooksTabBarController.swift; path = WBooks/Models/WBooksTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		09C5B0FE2121A7E5001BE26A /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -303,7 +305,8 @@
 		099F0D8F2124630700E4AF20 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				099F0D902124633600E4AF20 /* Extensions.swift */,
+				099F0D902124633600E4AF20 /* UIImageViewExtension.swift */,
+				09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				09B15CA3213032B1002B8FC3 /* UIViewControllerExtension.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				090F4A47212C5B980084C4EB /* RecommendationView.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
@@ -684,7 +688,7 @@
 				099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */,
 				09889ADD212DA09800FB0ED2 /* RentalsViewModel.swift in Sources */,
 				099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */,
-				099F0D912124633600E4AF20 /* Extensions.swift in Sources */,
+				099F0D912124633600E4AF20 /* UIImageViewExtension.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,
 				09889AE6212DA56700FB0ED2 /* WishlistViewModel.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
