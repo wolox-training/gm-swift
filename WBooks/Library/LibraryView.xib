@@ -17,16 +17,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GRc-dk-7Cx">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="115" width="375" height="552"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="4fP-aA-8Vy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="115" id="Vy3-pD-eGT"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="4fP-aA-8Vy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="19q-gT-lpM"/>
                 <constraint firstItem="GRc-dk-7Cx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KN3-xX-JWv"/>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="top" secondItem="4fP-aA-8Vy" secondAttribute="bottom" id="Qu0-5G-jTz"/>
+                <constraint firstItem="4fP-aA-8Vy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YSh-0Y-k6q"/>
+                <constraint firstItem="4fP-aA-8Vy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bYq-iK-J4Q"/>
                 <constraint firstItem="GRc-dk-7Cx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qrB-nE-3so"/>
                 <constraint firstItem="GRc-dk-7Cx" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="qxA-RN-fQe"/>
-                <constraint firstItem="GRc-dk-7Cx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vG3-fq-u7H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
@@ -35,4 +44,7 @@
             <point key="canvasLocation" x="24.5" y="51.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="bc_nav bar" width="375" height="102"/>
+    </resources>
 </document>
