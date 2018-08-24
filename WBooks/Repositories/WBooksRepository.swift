@@ -24,6 +24,8 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
     
     private static let EntitiesPath = "books"
     private static let CommentsPath = "books/$book_id/comments"
+    private static let PageKey = "page"
+    private static let AmountKey = "amount"
     
     public func fetchEntities() -> SignalProducer<[Book], RepositoryError> {
         let path = WBookRepository.EntitiesPath
@@ -34,7 +36,7 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
     
     public func fetchEntities(page: Int, amount: Int) -> SignalProducer<[Book], RepositoryError> {
         let path = WBookRepository.EntitiesPath
-        let parameters = ["page": page, "amount": amount]
+        let parameters = [WBookRepository.PageKey: page, WBookRepository.AmountKey: amount]
         return performRequest(method: .get, path: path, parameters: parameters) {
             decode($0).toResult()
         }
