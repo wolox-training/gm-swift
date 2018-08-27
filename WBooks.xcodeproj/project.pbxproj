@@ -35,6 +35,8 @@
 		09E3E02A2121C2E30001D694 /* LibraryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E0292121C2E30001D694 /* LibraryCell.swift */; };
 		09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E02E2121DC860001D694 /* WBooksRepository.swift */; };
 		09E3E0322121DCBE0001D694 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E3E0312121DCBE0001D694 /* Book.swift */; };
+		09E4A4CC213427F500B2A2A9 /* DetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09E4A4CB213427F500B2A2A9 /* DetailsView.xib */; };
+		09E4A4CE2134287600B2A2A9 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E4A4CD2134287600B2A2A9 /* DetailsView.swift */; };
 		46BEC92C2117C468004338C4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91E2117BB4A004338C4 /* Alamofire.framework */; };
 		46BEC92D2117C468004338C4 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91F2117BB4A004338C4 /* AlamofireNetworkActivityIndicator.framework */; };
 		46BEC92E2117C468004338C4 /* AlamofireNetworkActivityLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91C2117BB4A004338C4 /* AlamofireNetworkActivityLogger.framework */; };
@@ -124,6 +126,8 @@
 		09E3E0292121C2E30001D694 /* LibraryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCell.swift; sourceTree = "<group>"; };
 		09E3E02E2121DC860001D694 /* WBooksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksRepository.swift; sourceTree = "<group>"; };
 		09E3E0312121DCBE0001D694 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		09E4A4CB213427F500B2A2A9 /* DetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsView.xib; sourceTree = "<group>"; };
+		09E4A4CD2134287600B2A2A9 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		46BEC9192117B6C3004338C4 /* WolmoCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WolmoCore.framework; path = Carthage/Build/iOS/WolmoCore.framework; sourceTree = "<group>"; };
 		46BEC91B2117BB4A004338C4 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		46BEC91C2117BB4A004338C4 /* AlamofireNetworkActivityLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityLogger.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityLogger.framework; sourceTree = "<group>"; };
@@ -302,6 +306,15 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		09E4A4CF21342C1400B2A2A9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				09E4A4CB213427F500B2A2A9 /* DetailsView.xib */,
+				09E4A4CD2134287600B2A2A9 /* DetailsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		46BEC93F2117C704004338C4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +358,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				09E4A4CF21342C1400B2A2A9 /* Details */,
 				09926D17212F0CF7002F9B30 /* Controller */,
 				090F4A43212C5B100084C4EB /* Recommendation */,
 				0988B8F42126EEC200A17E9B /* Utils */,
@@ -518,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				098BBE142125AAD600970C64 /* CommentCell.xib in Resources */,
+				09E4A4CC213427F500B2A2A9 /* DetailsView.xib in Resources */,
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
 				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
 				090F4A49212C5BB00084C4EB /* RecommendationView.xib in Resources */,
@@ -603,6 +618,7 @@
 				090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */,
 				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
 				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
+				09E4A4CE2134287600B2A2A9 /* DetailsView.swift in Sources */,
 				099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */,
 				098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,

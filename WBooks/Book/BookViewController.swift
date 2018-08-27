@@ -56,16 +56,17 @@ private extension BookViewController {
     
     func setupView() {
         navigationItem.title = BookViewController.statusBarTitle
-        bookView.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
         
+        bookView.detailsView.photo.image = UIImage(named: BookViewController.imagePlaceholder)
+
         if let url = book.imageURL {
-            bookView.bookPhoto.load(url: url)
+            bookView.detailsView.photo.load(url: url)
         }
         
-        bookView.bookTitle.text = book.title
-        bookView.bookAuthor.text = book.author
-        bookView.bookGenre.text = book.genre
-        bookView.bookYear.text = book.year
+        bookView.detailsView.title.text = book.title
+        bookView.detailsView.author.text = book.author
+        bookView.detailsView.genre.text = book.genre
+        bookView.detailsView.year.text = book.year
     }
     
 }
