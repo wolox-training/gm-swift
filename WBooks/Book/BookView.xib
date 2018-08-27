@@ -22,18 +22,18 @@
                         <constraint firstAttribute="height" constant="115" id="Z9i-Qs-8lm"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-DS-sx5">
-                    <rect key="frame" x="40" y="139" width="344" height="597"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-DS-sx5">
+                    <rect key="frame" x="30" y="139" width="354" height="597"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-ku-DZo" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="344" height="280"/>
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="280"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
-                            <rect key="frame" x="0.0" y="298" width="344" height="299"/>
+                            <rect key="frame" x="0.0" y="304" width="354" height="293"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
@@ -41,12 +41,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="QRP-DS-sx5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="08Z-oQ-axT"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3m6-Or-qaq"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QRP-DS-sx5" secondAttribute="trailing" constant="30" id="70e-cu-KdC"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bFb-dL-eBs"/>
                 <constraint firstItem="QRP-DS-sx5" firstAttribute="top" secondItem="OWd-MC-6hx" secondAttribute="bottom" constant="24" id="h8b-BW-KSd"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="s5a-uf-aVS"/>
+                <constraint firstItem="QRP-DS-sx5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="ug9-FW-gul"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QRP-DS-sx5" secondAttribute="bottom" id="xJ8-He-MxH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
