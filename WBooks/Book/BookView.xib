@@ -16,36 +16,38 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
-                    <rect key="frame" x="0.0" y="459" width="414" height="277"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="OWd-MC-6hx">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="115" id="Z9i-Qs-8lm"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-ku-DZo" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="40" y="139" width="344" height="280"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
-                    </constraints>
-                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-DS-sx5">
+                    <rect key="frame" x="40" y="139" width="344" height="597"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-ku-DZo" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="344" height="280"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
+                            <rect key="frame" x="0.0" y="298" width="344" height="299"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="QRP-DS-sx5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="08Z-oQ-axT"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3m6-Or-qaq"/>
-                <constraint firstItem="lky-oQ-cTo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IlL-7b-aQn"/>
-                <constraint firstItem="f4p-ku-DZo" firstAttribute="top" secondItem="OWd-MC-6hx" secondAttribute="bottom" constant="24" id="SiJ-vm-ntV"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lky-oQ-cTo" secondAttribute="bottom" id="WMz-PA-8cv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QRP-DS-sx5" secondAttribute="trailing" constant="30" id="70e-cu-KdC"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bFb-dL-eBs"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f4p-ku-DZo" secondAttribute="trailing" constant="30" id="bFn-ny-Cjk"/>
+                <constraint firstItem="QRP-DS-sx5" firstAttribute="top" secondItem="OWd-MC-6hx" secondAttribute="bottom" constant="24" id="h8b-BW-KSd"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="s5a-uf-aVS"/>
-                <constraint firstItem="lky-oQ-cTo" firstAttribute="top" secondItem="f4p-ku-DZo" secondAttribute="bottom" constant="40" id="svH-9M-F6v"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lky-oQ-cTo" secondAttribute="trailing" id="t19-Km-Fwi"/>
-                <constraint firstItem="f4p-ku-DZo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="wmL-dm-1ry"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QRP-DS-sx5" secondAttribute="bottom" id="xJ8-He-MxH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
