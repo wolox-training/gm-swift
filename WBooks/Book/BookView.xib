@@ -16,25 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="mlI-ed-RTx" userLabel="ButtonStackView">
-                    <rect key="frame" x="40" y="303" width="344" height="116"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vg4-YN-79D" customClass="HollowButton" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="344" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="YD0-vd-QTY"/>
-                            </constraints>
-                            <state key="normal" title="ADD TO WISHLIST"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-eO-Q9O" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="66" width="344" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="s2f-Z9-sFh"/>
-                            </constraints>
-                            <state key="normal" title="RENT"/>
-                        </button>
-                    </subviews>
-                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
                     <rect key="frame" x="0.0" y="459" width="414" height="277"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,34 +27,29 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-ku-DZo" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="40" y="139" width="344" height="140"/>
+                    <rect key="frame" x="40" y="139" width="344" height="280"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="HQM-4M-XIv"/>
+                        <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3m6-Or-qaq"/>
-                <constraint firstItem="mlI-ed-RTx" firstAttribute="top" secondItem="f4p-ku-DZo" secondAttribute="bottom" constant="24" id="7TH-se-3WX"/>
                 <constraint firstItem="lky-oQ-cTo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IlL-7b-aQn"/>
-                <constraint firstItem="mlI-ed-RTx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="RAE-vq-3Ia"/>
-                <constraint firstItem="lky-oQ-cTo" firstAttribute="top" secondItem="mlI-ed-RTx" secondAttribute="bottom" constant="40" id="SMt-Lt-AXt"/>
                 <constraint firstItem="f4p-ku-DZo" firstAttribute="top" secondItem="OWd-MC-6hx" secondAttribute="bottom" constant="24" id="SiJ-vm-ntV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lky-oQ-cTo" secondAttribute="bottom" id="WMz-PA-8cv"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bFb-dL-eBs"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f4p-ku-DZo" secondAttribute="trailing" constant="30" id="bFn-ny-Cjk"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mlI-ed-RTx" secondAttribute="trailing" constant="30" id="luv-4m-EXG"/>
                 <constraint firstItem="OWd-MC-6hx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="s5a-uf-aVS"/>
+                <constraint firstItem="lky-oQ-cTo" firstAttribute="top" secondItem="f4p-ku-DZo" secondAttribute="bottom" constant="40" id="svH-9M-F6v"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lky-oQ-cTo" secondAttribute="trailing" id="t19-Km-Fwi"/>
                 <constraint firstItem="f4p-ku-DZo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="wmL-dm-1ry"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="addToWishlistButton" destination="Vg4-YN-79D" id="UGd-Nl-hG8"/>
                 <outlet property="detailsView" destination="f4p-ku-DZo" id="r4Q-DY-qMS"/>
-                <outlet property="rentButton" destination="0q8-eO-Q9O" id="YUu-ou-6CK"/>
                 <outlet property="tableView" destination="lky-oQ-cTo" id="6yO-mf-4YI"/>
             </connections>
             <point key="canvasLocation" x="26" y="51"/>

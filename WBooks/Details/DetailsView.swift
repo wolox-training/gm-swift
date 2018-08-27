@@ -18,6 +18,8 @@ class DetailsView: UIView {
     @IBOutlet weak var author: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var genre: UILabel!
+    @IBOutlet weak var firstButton: HollowButton!
+    @IBOutlet weak var secondButton: GradientButton!
     
     
     override init(frame: CGRect) {
