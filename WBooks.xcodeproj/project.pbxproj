@@ -14,19 +14,30 @@
 		090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A4C212C61560084C4EB /* SimpleTextField.swift */; };
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
 		097F1ED421259F5F00AE7875 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F1ED321259F5F00AE7875 /* Comment.swift */; };
+		09889AD7212DA06600FB0ED2 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AD6212DA06600FB0ED2 /* RentalsViewController.swift */; };
+		09889AD9212DA07D00FB0ED2 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AD8212DA07D00FB0ED2 /* RentalsView.swift */; };
+		09889ADB212DA08900FB0ED2 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09889ADA212DA08900FB0ED2 /* RentalsView.xib */; };
+		09889ADD212DA09800FB0ED2 /* RentalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889ADC212DA09800FB0ED2 /* RentalsViewModel.swift */; };
+		09889AE0212DA4F100FB0ED2 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889ADF212DA4F100FB0ED2 /* WishlistViewController.swift */; };
+		09889AE2212DA54D00FB0ED2 /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AE1212DA54D00FB0ED2 /* WishlistView.swift */; };
+		09889AE4212DA55800FB0ED2 /* WishlistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09889AE3212DA55800FB0ED2 /* WishlistView.xib */; };
+		09889AE6212DA56700FB0ED2 /* WishlistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AE5212DA56700FB0ED2 /* WishlistViewModel.swift */; };
+		09889AEA212DAC6C00FB0ED2 /* SuggestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AE8212DAC6C00FB0ED2 /* SuggestionCell.swift */; };
+		09889AEB212DAC6C00FB0ED2 /* SuggestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09889AE9212DAC6C00FB0ED2 /* SuggestionCell.xib */; };
 		0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0988B8F52126EED900A17E9B /* ImageFetcher.swift */; };
 		098BBE132125AAD600970C64 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE112125AAD600970C64 /* CommentCell.swift */; };
 		098BBE142125AAD600970C64 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 098BBE122125AAD600970C64 /* CommentCell.xib */; };
 		098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 098BBE152125C6F100970C64 /* RoundedImageView.swift */; };
-		09926D19212F0D15002F9B30 /* WBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09926D18212F0D15002F9B30 /* WBooksViewController.swift */; };
+		09926D12212ED5DD002F9B30 /* Rent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09926D11212ED5DD002F9B30 /* Rent.swift */; };
 		099F0D8821244A0800E4AF20 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8721244A0800E4AF20 /* BookView.swift */; };
 		099F0D8A21244A5300E4AF20 /* BookView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 099F0D8921244A5300E4AF20 /* BookView.xib */; };
 		099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8B21244A8800E4AF20 /* BookViewController.swift */; };
 		099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D8D21244AB300E4AF20 /* BookViewModel.swift */; };
-		099F0D912124633600E4AF20 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* Extensions.swift */; };
+		099F0D912124633600E4AF20 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D902124633600E4AF20 /* UIImageViewExtension.swift */; };
 		099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9321246E4400E4AF20 /* GradientButton.swift */; };
 		099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099F0D9521248FBA00E4AF20 /* HollowButton.swift */; };
 		09A28F9821358C6800C4B358 /* WBooksSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A28F9721358C6800C4B358 /* WBooksSearchBar.swift */; };
+		09B15CA3213032B1002B8FC3 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */; };
 		09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */; };
 		09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09C5B0FE2121A7E5001BE26A /* LibraryView.xib */; };
 		09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5B1002121A80D001BE26A /* LibraryView.swift */; };
@@ -104,19 +115,30 @@
 		090F4A4C212C61560084C4EB /* SimpleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextField.swift; sourceTree = "<group>"; };
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		097F1ED321259F5F00AE7875 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		09889AD6212DA06600FB0ED2 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
+		09889AD8212DA07D00FB0ED2 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
+		09889ADA212DA08900FB0ED2 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
+		09889ADC212DA09800FB0ED2 /* RentalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewModel.swift; sourceTree = "<group>"; };
+		09889ADF212DA4F100FB0ED2 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		09889AE1212DA54D00FB0ED2 /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
+		09889AE3212DA55800FB0ED2 /* WishlistView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WishlistView.xib; sourceTree = "<group>"; };
+		09889AE5212DA56700FB0ED2 /* WishlistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewModel.swift; sourceTree = "<group>"; };
+		09889AE8212DAC6C00FB0ED2 /* SuggestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionCell.swift; sourceTree = "<group>"; };
+		09889AE9212DAC6C00FB0ED2 /* SuggestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestionCell.xib; sourceTree = "<group>"; };
 		0988B8F52126EED900A17E9B /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		098BBE112125AAD600970C64 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		098BBE122125AAD600970C64 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		098BBE152125C6F100970C64 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
-		09926D18212F0D15002F9B30 /* WBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksViewController.swift; sourceTree = "<group>"; };
+		09926D11212ED5DD002F9B30 /* Rent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rent.swift; sourceTree = "<group>"; };
 		099F0D8721244A0800E4AF20 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		099F0D8921244A5300E4AF20 /* BookView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookView.xib; sourceTree = "<group>"; };
 		099F0D8B21244A8800E4AF20 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		099F0D8D21244AB300E4AF20 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
-		099F0D902124633600E4AF20 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		099F0D902124633600E4AF20 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		099F0D9321246E4400E4AF20 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		099F0D9521248FBA00E4AF20 /* HollowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollowButton.swift; sourceTree = "<group>"; };
 		09A28F9721358C6800C4B358 /* WBooksSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksSearchBar.swift; sourceTree = "<group>"; };
+		09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		09BF018A2122FEFD0098E24E /* WBooksTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WBooksTabBarController.swift; path = WBooks/Models/WBooksTabBarController.swift; sourceTree = SOURCE_ROOT; };
 		09C5B0FE2121A7E5001BE26A /* LibraryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryView.xib; sourceTree = "<group>"; };
 		09C5B1002121A80D001BE26A /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
@@ -220,20 +242,44 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		09889AD5212DA04C00FB0ED2 /* Rentals */ = {
+			isa = PBXGroup;
+			children = (
+				09889AE7212DAC1E00FB0ED2 /* Cells */,
+				09889AD6212DA06600FB0ED2 /* RentalsViewController.swift */,
+				09889AD8212DA07D00FB0ED2 /* RentalsView.swift */,
+				09889ADA212DA08900FB0ED2 /* RentalsView.xib */,
+				09889ADC212DA09800FB0ED2 /* RentalsViewModel.swift */,
+			);
+			path = Rentals;
+			sourceTree = "<group>";
+		};
+		09889ADE212DA4D600FB0ED2 /* Wishlist */ = {
+			isa = PBXGroup;
+			children = (
+				09889ADF212DA4F100FB0ED2 /* WishlistViewController.swift */,
+				09889AE1212DA54D00FB0ED2 /* WishlistView.swift */,
+				09889AE3212DA55800FB0ED2 /* WishlistView.xib */,
+				09889AE5212DA56700FB0ED2 /* WishlistViewModel.swift */,
+			);
+			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		09889AE7212DAC1E00FB0ED2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				09889AE8212DAC6C00FB0ED2 /* SuggestionCell.swift */,
+				09889AE9212DAC6C00FB0ED2 /* SuggestionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0988B8F42126EEC200A17E9B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				0988B8F52126EED900A17E9B /* ImageFetcher.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		09926D17212F0CF7002F9B30 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				09926D18212F0D15002F9B30 /* WBooksViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		099F0D862124489800E4AF20 /* Book */ = {
@@ -251,7 +297,8 @@
 		099F0D8F2124630700E4AF20 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				099F0D902124633600E4AF20 /* Extensions.swift */,
+				099F0D902124633600E4AF20 /* UIImageViewExtension.swift */,
+				09B15CA2213032B1002B8FC3 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +359,7 @@
 				46BEC94A2117DA4E004338C4 /* AuthUser.swift */,
 				09E3E0312121DCBE0001D694 /* Book.swift */,
 				097F1ED321259F5F00AE7875 /* Comment.swift */,
+				09926D11212ED5DD002F9B30 /* Rent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,7 +396,8 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
-				09926D17212F0CF7002F9B30 /* Controller */,
+				09889ADE212DA4D600FB0ED2 /* Wishlist */,
+				09889AD5212DA04C00FB0ED2 /* Rentals */,
 				090F4A43212C5B100084C4EB /* Recommendation */,
 				0988B8F42126EEC200A17E9B /* Utils */,
 				09E3E02D2121DC7B0001D694 /* Repositories */,
@@ -520,7 +569,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09889ADB212DA08900FB0ED2 /* RentalsView.xib in Resources */,
 				098BBE142125AAD600970C64 /* CommentCell.xib in Resources */,
+				09889AE4212DA55800FB0ED2 /* WishlistView.xib in Resources */,
+				09889AEB212DAC6C00FB0ED2 /* SuggestionCell.xib in Resources */,
 				09C5B0FF2121A7E5001BE26A /* LibraryView.xib in Resources */,
 				09E3E0282121C2DC0001D694 /* LibraryCell.xib in Resources */,
 				090F4A49212C5BB00084C4EB /* RecommendationView.xib in Resources */,
@@ -600,29 +652,37 @@
 				09C5B1012121A80D001BE26A /* LibraryView.swift in Sources */,
 				090F4A45212C5B740084C4EB /* RecommendationViewController.swift in Sources */,
 				09C5B1032121A82B001BE26A /* LibraryViewController.swift in Sources */,
+				09889AEA212DAC6C00FB0ED2 /* SuggestionCell.swift in Sources */,
 				09E3E0322121DCBE0001D694 /* Book.swift in Sources */,
 				090F4A4B212C5BBE0084C4EB /* RecommendationViewModel.swift in Sources */,
 				09BF018B2122FEFD0098E24E /* WBooksTabBarController.swift in Sources */,
 				090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */,
 				099F0D8E21244AB300E4AF20 /* BookViewModel.swift in Sources */,
+				09926D12212ED5DD002F9B30 /* Rent.swift in Sources */,
+				09889AD7212DA06600FB0ED2 /* RentalsViewController.swift in Sources */,
+				09889AD9212DA07D00FB0ED2 /* RentalsView.swift in Sources */,
 				099F0D8821244A0800E4AF20 /* BookView.swift in Sources */,
 				099F0D9621248FBA00E4AF20 /* HollowButton.swift in Sources */,
 				098BBE162125C6F100970C64 /* RoundedImageView.swift in Sources */,
 				CEB934DD1D21992100DF75C2 /* Environment.swift in Sources */,
 				09423CFA212309D300825171 /* Test.swift in Sources */,
+				09889AE0212DA4F100FB0ED2 /* WishlistViewController.swift in Sources */,
 				097F1ED421259F5F00AE7875 /* Comment.swift in Sources */,
+				09889AE2212DA54D00FB0ED2 /* WishlistView.swift in Sources */,
 				0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				09B15CA3213032B1002B8FC3 /* UIViewControllerExtension.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				09A28F9821358C6800C4B358 /* WBooksSearchBar.swift in Sources */,
 				090F4A47212C5B980084C4EB /* RecommendationView.swift in Sources */,
 				46BEC94B2117DA4E004338C4 /* AuthUser.swift in Sources */,
-				09926D19212F0D15002F9B30 /* WBooksViewController.swift in Sources */,
 				099F0D9421246E4400E4AF20 /* GradientButton.swift in Sources */,
+				09889ADD212DA09800FB0ED2 /* RentalsViewModel.swift in Sources */,
 				099F0D8C21244A8800E4AF20 /* BookViewController.swift in Sources */,
-				099F0D912124633600E4AF20 /* Extensions.swift in Sources */,
+				099F0D912124633600E4AF20 /* UIImageViewExtension.swift in Sources */,
 				09C5B1052121A841001BE26A /* LibraryViewModel.swift in Sources */,
+				09889AE6212DA56700FB0ED2 /* WishlistViewModel.swift in Sources */,
 				46BEC9462117C765004338C4 /* User.swift in Sources */,
 				098BBE132125AAD600970C64 /* CommentCell.swift in Sources */,
 			);

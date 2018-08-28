@@ -12,7 +12,7 @@ import ReactiveSwift
 import WolmoCore
 
 
-class BookViewController: WBooksViewController {
+class BookViewController: UIViewController {
     
     private let bookView: BookView = BookView.loadFromNib()!
     public let book: Book
@@ -47,6 +47,12 @@ class BookViewController: WBooksViewController {
         
         setupBindings()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
+    }
+    
 }
 
 //MARK: - Private
