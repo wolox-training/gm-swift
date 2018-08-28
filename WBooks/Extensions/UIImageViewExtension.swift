@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  UIImageViewExtension.swift
 //  WBooks
 //
 //  Created by Gabriel Leandro Mazzei on 15/8/18.
