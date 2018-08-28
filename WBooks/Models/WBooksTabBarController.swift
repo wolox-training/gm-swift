@@ -18,31 +18,10 @@ class WBooksTabBarController: UITabBarController {
         setupTabs()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        let navigationBar = self.navigationController?.navigationBar
-        
-        navigationBar?.shadowImage = nil
-        navigationBar?.setBackgroundImage(nil, for: .default)
-        navigationBar?.isTranslucent = true
-        
-        navigationBar?.titleTextAttributes = UINavigationBar.appearance().titleTextAttributes
-        navigationBar?.tintColor = UINavigationBar.appearance().tintColor
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        let navigationBar = self.navigationController?.navigationBar
-        
-        navigationBar?.setBackgroundImage(UIImage(), for: .default)
-        navigationBar?.shadowImage = UIImage()
-        navigationBar?.isTranslucent = true
-        
-        let textAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        navigationBar?.titleTextAttributes = textAttributes
-        navigationBar?.tintColor = UIColor.white
+        setNavigationBarStyle()
     }
     
 }
@@ -60,8 +39,7 @@ private extension WBooksTabBarController {
         let libraryTab = UITabBarItem(title: "Library", image: UIImage(named: "ic_library"), selectedImage: UIImage(named:"ic_library active"))
         libraryViewController.tabBarItem = libraryTab
         
-        // TODO: Implementar 'Wish List'
-        let wishlistViewController = LibraryViewController()
+        let wishlistViewController = WishlistViewController()
         let wishlistTab = UITabBarItem(title: "Wishlist", image: UIImage(named: "ic_wishlist"), selectedImage: UIImage(named:"ic_wishlist active"))
         wishlistViewController.tabBarItem = wishlistTab
         
@@ -69,8 +47,7 @@ private extension WBooksTabBarController {
         let addNewTab = UITabBarItem(title: "Add New", image: UIImage(named: "ic_add new"), selectedImage: UIImage(named:"ic_add new active"))
         addNewViewController.tabBarItem = addNewTab
         
-        // TODO: Implementar 'Rentals'
-        let rentalsViewController = LibraryViewController()
+        let rentalsViewController = RentalsViewController()
         let rentalsTab = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals"), selectedImage: UIImage(named:"ic_myrentals active"))
         rentalsViewController.tabBarItem = rentalsTab
         
