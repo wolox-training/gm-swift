@@ -61,7 +61,7 @@ private extension RecommendationViewController {
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
             
-            present(imagePicker, animated: true, completion: nil)
+            tabBarController?.present(imagePicker, animated: true, completion: nil)
         }
     }
     
