@@ -15,7 +15,7 @@ class LibraryViewController: UIViewController {
     // MARK: Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel: LibraryViewModel
-    private lazy var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 20))
+    private lazy var searchBar: UISearchBar = WBooksSearchBar(containerView: view)
     private var searchActive: Bool = false
     private var filteredBooks = [Book]()
     
@@ -46,6 +46,21 @@ class LibraryViewController: UIViewController {
         searchBar.delegate = self
         
         setupBindings()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if (searchActive) {
+            showSearchBar()
+            hideSearchButton()
+        } else {
+            hideSearchBar()
+            showSearchButton()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        hideSearchBar()
+        hideSearchButton()
     }
     
 }
@@ -139,7 +154,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
 extension LibraryViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.text = ""
+        searchBar.text = .none
         self.searchBar(searchBar, textDidChange: searchBar.text!)
         searchBar.endEditing(true)
         searchActive = false;

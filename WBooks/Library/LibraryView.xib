@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="tableView" destination="GRc-dk-7Cx" id="yLi-jP-JtX"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="-75" y="28"/>
         </view>
     </objects>
     <resources>
