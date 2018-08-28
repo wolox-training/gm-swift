@@ -105,17 +105,15 @@ private extension LibraryViewController {
 extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(searchActive) {
-            return filteredBooks.count
-        } else {
-            return viewModel.books.value.count
-        }
+        let bookList = getBookList()
+        return bookList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         
-        let book = getBook(index: indexPath.row)
+        let bookList = getBookList()
+        let book = bookList[indexPath.row]
         
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
         
@@ -126,7 +124,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
         
-        if indexPath.row == viewModel.books.value.count - 1 {
+        if !searchActive && indexPath.row == viewModel.books.value.count - 1 {
             viewModel.fetchMoreBooks()
         }
         
@@ -134,19 +132,21 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book = getBook(index: indexPath.row)
+        let bookList = getBookList()
+        let book = bookList[indexPath.row]
         let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
         let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
         tabBarController?.navigationController?.pushViewController(bookViewController, animated: true)
     }
     
-    func getBook(index: Int) -> Book {
+    func getBookList() -> [Book] {
         if (searchActive) {
-            return filteredBooks[index]
+            return filteredBooks
         } else {
-            return viewModel.books.value[index]
+            return viewModel.books.value
         }
     }
+    
 }
 
 
