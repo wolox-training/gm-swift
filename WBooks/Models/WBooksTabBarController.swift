@@ -24,12 +24,6 @@ class WBooksTabBarController: UITabBarController {
         setNavigationBarStyle()
     }
     
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        removeNavigationBarStyle()
-    }
-    
 }
 
 // MARK: - Private

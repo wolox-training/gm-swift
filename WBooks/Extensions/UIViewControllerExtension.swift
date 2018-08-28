@@ -22,16 +22,5 @@ public extension UIViewController {
         navigationBar?.tintColor = UIColor.white
     }
     
-    func removeNavigationBarStyle() {
-        let navigationBar = self.navigationController?.navigationBar
-        
-        navigationBar?.shadowImage = nil
-        navigationBar?.setBackgroundImage(nil, for: .default)
-        navigationBar?.isTranslucent = true
-        
-        navigationBar?.titleTextAttributes = UINavigationBar.appearance().titleTextAttributes
-        navigationBar?.tintColor = UINavigationBar.appearance().tintColor
-    }
-    
 }
 
