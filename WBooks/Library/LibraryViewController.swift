@@ -148,7 +148,6 @@ extension LibraryViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("searchbar => textDidChange => \(searchText)")
         
         filteredBooks = viewModel.books.value.filter({ (book: Book) -> Bool in
             return book.title.lowercased().contains(searchText.lowercased()) ||
