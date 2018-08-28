@@ -15,7 +15,8 @@ class LibraryViewController: UIViewController {
     // MARK: Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel: LibraryViewModel
-    private var searchActive : Bool = false
+    private lazy var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 20))
+    private var searchActive: Bool = false
     private var filteredBooks = [Book]()
     
     private static let cellId = "library_view_cell_id"
@@ -42,7 +43,7 @@ class LibraryViewController: UIViewController {
         libraryView.tableView.dataSource = self
         libraryView.tableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: LibraryViewController.cellId)
         
-        libraryView.searchBar.delegate = self
+        searchBar.delegate = self
         
         setupBindings()
     }
@@ -54,16 +55,39 @@ class LibraryViewController: UIViewController {
 private extension LibraryViewController {
     
     func setupView() {
-        libraryView.searchBar.isHidden = true
+        setSearchBar()
+        showSearchButton()
+        hideSearchBar()
+    }
+    
+    func setSearchBar() {
+        searchBar.placeholder = "Search books"
+        searchBar.showsCancelButton = true
+    }
+    
+    @objc func searchClicked(sender: Any) {
+        showSearchBar()
+        hideSearchButton()
+    }
+    
+    func showSearchBar() {
+        let barItem = UIBarButtonItem(customView: searchBar)
+        tabBarController?.navigationItem.leftBarButtonItem = barItem
+        searchBar.becomeFirstResponder()
+    }
+    
+    func hideSearchBar() {
+        tabBarController?.navigationItem.leftBarButtonItem = nil
+    }
+    
+    func showSearchButton() {
         let searchButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: #selector(searchClicked(sender:)))
         tabBarController?.navigationItem.rightBarButtonItem = searchButtonItem
     }
     
-    @objc func searchClicked(sender: Any) {
-        libraryView.searchBar.isHidden = false
-        libraryView.searchBar.becomeFirstResponder()
+    func hideSearchButton() {
+        tabBarController?.navigationItem.rightBarButtonItem = nil
     }
-    
 }
 
 
@@ -81,12 +105,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         
-        let book: Book
-        if (searchActive) {
-            book = filteredBooks[indexPath.row]
-        } else {
-            book = viewModel.books.value[indexPath.row]
-        }
+        let book = getBook(index: indexPath.row)
         
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
         
@@ -101,41 +120,35 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let book: Book = viewModel.books.value[indexPath.row]
+        let book = getBook(index: indexPath.row)
         let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
         let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
         navigationController?.pushViewController(bookViewController, animated: true)
     }
     
+    func getBook(index: Int) -> Book {
+        if (searchActive) {
+            return filteredBooks[index]
+        } else {
+            return viewModel.books.value[index]
+        }
+    }
 }
 
 
 extension LibraryViewController: UISearchBarDelegate {
     
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        print("searchbar => beginEditing")
-        searchActive = true;
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchActive = false;
-        print("searchbar => endEditing")
-    }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("searchbar => cancel")
         searchBar.text = ""
         self.searchBar(searchBar, textDidChange: searchBar.text!)
         searchBar.endEditing(true)
-        searchBar.isHidden = true
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("searchbar => search")
-        searchActive = true;
+        searchActive = false;
+        hideSearchBar()
+        showSearchButton()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("searchbar => textDidChange => \(searchText)")
         
         filteredBooks = viewModel.books.value.filter({ (book: Book) -> Bool in
             return book.title.lowercased().contains(searchText.lowercased()) ||
@@ -143,7 +156,6 @@ extension LibraryViewController: UISearchBarDelegate {
         })
         
         searchActive = searchText.isNotEmpty
-        
         libraryView.tableView.reloadData()
     }
     
