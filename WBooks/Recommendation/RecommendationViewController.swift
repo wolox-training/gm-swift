@@ -37,13 +37,20 @@ class RecommendationViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
+    }
 }
 
 
 // MARK: - Private
 private extension RecommendationViewController {
     
+    private static let statusBarTitle = "ADD NEW BOOK"
+    
     func setupView() {
+        navigationItem.title = RecommendationViewController.statusBarTitle
         recommendationView.imagePickerButton.addTarget(self, action: #selector(imagePickerClicked(sender:)), for: .touchUpInside)
     }
     

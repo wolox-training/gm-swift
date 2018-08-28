@@ -58,7 +58,7 @@ class BookViewController: UIViewController {
 //MARK: - Private
 private extension BookViewController {
     
-    private static let statusBarTitle = "ADD NEW BOOK"
+    private static let statusBarTitle = "BOOK DETAILS"
     
     func setupView() {
         navigationItem.title = BookViewController.statusBarTitle

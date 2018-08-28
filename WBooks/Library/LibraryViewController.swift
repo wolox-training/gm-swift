@@ -48,19 +48,10 @@ class LibraryViewController: UIViewController {
         setupBindings()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if (searchActive) {
-            showSearchBar()
-            hideSearchButton()
-        } else {
-            hideSearchBar()
-            showSearchButton()
-        }
-    }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        hideSearchBar()
-        hideSearchButton()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
     }
     
 }
@@ -69,7 +60,10 @@ class LibraryViewController: UIViewController {
 // MARK: - Private
 private extension LibraryViewController {
     
+    private static let statusBarTitle = "LIBRARY"
+    
     func setupView() {
+        navigationItem.title = LibraryViewController.statusBarTitle
         setSearchBar()
         showSearchButton()
         hideSearchBar()
@@ -87,21 +81,21 @@ private extension LibraryViewController {
     
     func showSearchBar() {
         let barItem = UIBarButtonItem(customView: searchBar)
-        tabBarController?.navigationItem.leftBarButtonItem = barItem
+        navigationItem.leftBarButtonItem = barItem
         searchBar.becomeFirstResponder()
     }
     
     func hideSearchBar() {
-        tabBarController?.navigationItem.leftBarButtonItem = nil
+        navigationItem.leftBarButtonItem = nil
     }
     
     func showSearchButton() {
         let searchButtonItem = UIBarButtonItem(image: UIImage(named: "ic_search"), style: .plain, target: self, action: #selector(searchClicked(sender:)))
-        tabBarController?.navigationItem.rightBarButtonItem = searchButtonItem
+        navigationItem.rightBarButtonItem = searchButtonItem
     }
     
     func hideSearchButton() {
-        tabBarController?.navigationItem.rightBarButtonItem = nil
+        navigationItem.rightBarButtonItem = nil
     }
 }
 
@@ -138,7 +132,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         let book = getBook(index: indexPath.row)
         let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
         let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
-        navigationController?.pushViewController(bookViewController, animated: true)
+        tabBarController?.navigationController?.pushViewController(bookViewController, animated: true)
     }
     
     func getBook(index: Int) -> Book {

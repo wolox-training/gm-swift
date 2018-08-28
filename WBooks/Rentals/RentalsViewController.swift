@@ -34,7 +34,7 @@ class RentalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupView()
         
         rentalsView.rentsTableView.delegate = self
         rentalsView.rentsTableView.dataSource = self
@@ -47,9 +47,23 @@ class RentalsViewController: UIViewController {
         setupBindings()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
+    }
 }
 
+
+// MARK: - Private
+private extension RentalsViewController {
+    
+    private static let statusBarTitle = "RENTALS"
+    
+    func setupView() {
+        navigationItem.title = RentalsViewController.statusBarTitle
+    }
+
+}
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension RentalsViewController: UITableViewDataSource, UITableViewDelegate {
