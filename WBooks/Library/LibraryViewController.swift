@@ -21,7 +21,8 @@ class LibraryViewController: UIViewController {
     
     private static let cellId = "library_view_cell_id"
     private static let imagePlaceholder = "image_placeholder"
-
+    
+    
     init(viewModel: LibraryViewModel = LibraryViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
@@ -124,6 +125,10 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
+        
+        if indexPath.row == viewModel.books.value.count - 1 {
+            viewModel.fetchMoreBooks()
+        }
         
         return cell
     }
