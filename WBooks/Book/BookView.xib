@@ -33,14 +33,14 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-ff-aBz" customClass="SuggestionCollectionView" customModule="WBooks" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="296" width="354" height="171"/>
+                            <rect key="frame" x="0.0" y="296" width="354" height="130"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="171" id="IKC-Dd-Z7m"/>
+                                <constraint firstAttribute="height" constant="130" id="kff-LK-kNX"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
-                            <rect key="frame" x="0.0" y="483" width="354" height="114"/>
+                            <rect key="frame" x="0.0" y="442" width="354" height="155"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>

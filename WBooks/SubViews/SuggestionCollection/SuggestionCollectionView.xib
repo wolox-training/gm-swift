@@ -18,11 +18,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gm7-sy-HPK">
-                    <rect key="frame" x="0.0" y="0.0" width="343" height="170"/>
+                    <rect key="frame" x="0.0" y="0.0" width="343" height="130"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNN-i1-SaD">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
@@ -31,10 +31,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="j4N-Rt-r0p">
-                            <rect key="frame" x="0.0" y="40" width="343" height="130"/>
+                            <rect key="frame" x="0.0" y="40" width="343" height="90"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="130" id="Unr-Es-PqR"/>
+                                <constraint firstAttribute="height" constant="90" id="OG4-df-q38"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4tZ-k9-88j">
                                 <size key="itemSize" width="50" height="50"/>
@@ -48,14 +48,14 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="gm7-sy-HPK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="BOL-RI-i40"/>
                 <constraint firstItem="gm7-sy-HPK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ThW-Ar-KOH"/>
                 <constraint firstItem="gm7-sy-HPK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lYe-6s-M5Q"/>
-                <constraint firstItem="gm7-sy-HPK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="uuM-Vz-Nv1"/>
                 <constraint firstItem="gm7-sy-HPK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vgw-0F-hlN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-474.5" y="-138"/>
+            <point key="canvasLocation" x="-474.5" y="-158"/>
         </view>
     </objects>
 </document>

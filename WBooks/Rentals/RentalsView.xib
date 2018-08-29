@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3A8-vJ-shv">
-                    <rect key="frame" x="16" y="115" width="343" height="365"/>
+                    <rect key="frame" x="16" y="115" width="343" height="406"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="VSA-Mt-sVd">
@@ -27,10 +27,10 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcv-2V-ezc" customClass="SuggestionCollectionView" customModule="WBooks" customModuleProvider="target">
-                    <rect key="frame" x="16" y="496" width="343" height="171"/>
+                    <rect key="frame" x="16" y="537" width="343" height="130"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="171" id="CX1-QE-joV"/>
+                        <constraint firstAttribute="height" constant="130" id="wPW-9y-sVu"/>
                     </constraints>
                 </view>
             </subviews>
