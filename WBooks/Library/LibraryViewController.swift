@@ -15,7 +15,7 @@ class LibraryViewController: UIViewController {
     // MARK: Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel: LibraryViewModel
-    private lazy var searchBar: UISearchBar = WBooksSearchBar(containerView: view)
+    private var searchBar: UISearchBar
     private var searchActive: Bool = false
     private var filteredBooks = [Book]()
     
@@ -25,6 +25,10 @@ class LibraryViewController: UIViewController {
     
     init(viewModel: LibraryViewModel = LibraryViewModel()) {
         self.viewModel = viewModel
+        
+        let frame: CGRect = CGRect(x: 0, y: 0, width: libraryView.bounds.width, height: 20)
+        self.searchBar = UISearchBar(frame: frame)
+        
         super.init(nibName: .none, bundle: .none)
     }
     
