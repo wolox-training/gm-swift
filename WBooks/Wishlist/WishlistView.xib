@@ -22,14 +22,26 @@
                         <constraint firstAttribute="height" constant="115" id="gLc-TK-fsb"/>
                     </constraints>
                 </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-8n-pbs">
+                    <rect key="frame" x="16" y="115" width="343" height="552"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3hB-8n-pbs" secondAttribute="trailing" constant="16" id="8L0-p3-R1K"/>
                 <constraint firstItem="l82-fP-Ppr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A2t-6S-G0g"/>
+                <constraint firstItem="3hB-8n-pbs" firstAttribute="top" secondItem="l82-fP-Ppr" secondAttribute="bottom" id="K06-ad-c3z"/>
+                <constraint firstItem="3hB-8n-pbs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TUh-et-lpJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l82-fP-Ppr" secondAttribute="trailing" id="UEC-GE-uXq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3hB-8n-pbs" secondAttribute="bottom" id="VAC-bc-ctp"/>
                 <constraint firstItem="l82-fP-Ppr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yM5-H8-J2h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="tableView" destination="3hB-8n-pbs" id="TPt-Rh-u72"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
         </view>
     </objects>
     <resources>

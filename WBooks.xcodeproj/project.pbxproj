@@ -14,6 +14,7 @@
 		090F4A4D212C61560084C4EB /* SimpleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090F4A4C212C61560084C4EB /* SimpleTextField.swift */; };
 		09423CFA212309D300825171 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09423CF9212309D300825171 /* Test.swift */; };
 		097F1ED421259F5F00AE7875 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097F1ED321259F5F00AE7875 /* Comment.swift */; };
+		0984B2282136F2EC00137CE3 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0984B2272136F2EC00137CE3 /* Wish.swift */; };
 		09889AD7212DA06600FB0ED2 /* RentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AD6212DA06600FB0ED2 /* RentalsViewController.swift */; };
 		09889AD9212DA07D00FB0ED2 /* RentalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09889AD8212DA07D00FB0ED2 /* RentalsView.swift */; };
 		09889ADB212DA08900FB0ED2 /* RentalsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09889ADA212DA08900FB0ED2 /* RentalsView.xib */; };
@@ -114,6 +115,7 @@
 		090F4A4C212C61560084C4EB /* SimpleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTextField.swift; sourceTree = "<group>"; };
 		09423CF9212309D300825171 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		097F1ED321259F5F00AE7875 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		0984B2272136F2EC00137CE3 /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 		09889AD6212DA06600FB0ED2 /* RentalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsViewController.swift; sourceTree = "<group>"; };
 		09889AD8212DA07D00FB0ED2 /* RentalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RentalsView.swift; sourceTree = "<group>"; };
 		09889ADA212DA08900FB0ED2 /* RentalsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RentalsView.xib; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				09E3E0312121DCBE0001D694 /* Book.swift */,
 				097F1ED321259F5F00AE7875 /* Comment.swift */,
 				09926D11212ED5DD002F9B30 /* Rent.swift */,
+				0984B2272136F2EC00137CE3 /* Wish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -669,6 +672,7 @@
 				0988B8F62126EED900A17E9B /* ImageFetcher.swift in Sources */,
 				46BEC9492117C7AE004338C4 /* NetworkingBootstrapper.swift in Sources */,
 				9D1575051CB1B27500EA395E /* AppDelegate.swift in Sources */,
+				0984B2282136F2EC00137CE3 /* Wish.swift in Sources */,
 				09B15CA3213032B1002B8FC3 /* UIViewControllerExtension.swift in Sources */,
 				09E3E02F2121DC860001D694 /* WBooksRepository.swift in Sources */,
 				090F4A47212C5B980084C4EB /* RecommendationView.swift in Sources */,
