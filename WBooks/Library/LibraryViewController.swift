@@ -140,7 +140,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func getBookList() -> [Book] {
-        if (searchActive) {
+        if searchActive {
             return filteredBooks
         } else {
             return viewModel.books.value
