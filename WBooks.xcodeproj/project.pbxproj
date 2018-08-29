@@ -266,6 +266,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0984B21E2136C78E00137CE3 /* RentedBook */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RentedBook;
+			sourceTree = "<group>";
+		};
 		09889AD5212DA04C00FB0ED2 /* Rentals */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +435,7 @@
 		9D1575031CB1B27500EA395E /* WBooks */ = {
 			isa = PBXGroup;
 			children = (
+				0984B21E2136C78E00137CE3 /* RentedBook */,
 				090815032135C23500C9A898 /* SubViews */,
 				09889ADE212DA4D600FB0ED2 /* Wishlist */,
 				09889AD5212DA04C00FB0ED2 /* Rentals */,

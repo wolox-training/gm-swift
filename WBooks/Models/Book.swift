@@ -13,7 +13,7 @@ import Curry
 
 struct Book {
     
-    // MARK: Properties
+    // MARK: - Properties
     let id: Int
     let author: String
     let title: String

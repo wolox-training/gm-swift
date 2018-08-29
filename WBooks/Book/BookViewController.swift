@@ -55,16 +55,25 @@ class BookViewController: UIViewController {
     
 }
 
-//MARK: - Private
+
+// MARK: - Private
 private extension BookViewController {
     
     private static let statusBarTitle = "ADD NEW BOOK"
     
     func setupView() {
+        setNavigationBar()
+        setBookDetails()
+        setSuggestionCollection()
+    }
+    
+    func setNavigationBar() {
         navigationItem.title = BookViewController.statusBarTitle
-        
+    }
+    
+    func setBookDetails() {
         bookView.detailsView.photo.image = UIImage(named: BookViewController.imagePlaceholder)
-
+        
         if let url = book.imageURL {
             bookView.detailsView.photo.load(url: url)
         }
@@ -75,7 +84,12 @@ private extension BookViewController {
         bookView.detailsView.year.text = book.year
     }
     
+    func setSuggestionCollection() {
+        bookView.suggestionContainer.isHidden = true
+    }
+    
 }
+
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension BookViewController: UITableViewDataSource, UITableViewDelegate {
@@ -105,6 +119,7 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
     }
  
 }
+
 
 // MARK: - Bindings
 private extension BookViewController {

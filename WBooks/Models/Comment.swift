@@ -14,7 +14,7 @@ import Curry
 
 struct Comment {
     
-    // MARK: Properties
+    // MARK: - Properties
     let id: Int
     let content: String
     let user: User
