@@ -16,7 +16,6 @@ class BookViewController: UIViewController {
     
     internal let bookView: BookView = BookView.loadFromNib()!
     private let viewModel: BookViewModel
-    public let book: Book
     
     private static let statusBarTitle = "BOOK DETAIL"
     private static let imagePlaceholder = "image_placeholder"
@@ -26,7 +25,6 @@ class BookViewController: UIViewController {
     
     
     init(book: Book, viewModel: BookViewModel) {
-        self.book = book
         self.viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }
@@ -75,6 +73,7 @@ class BookViewController: UIViewController {
     internal func setBookDetails() {
         bookView.detailsView.photo.image = UIImage(named: BookViewController.imagePlaceholder)
         
+        let book = viewModel.book
         if let url = book.imageURL {
             bookView.detailsView.photo.load(url: url)
         }

@@ -13,7 +13,7 @@ import Result
 
 class BookViewModel {
     
-    private let book: Book
+    public let book: Book
     private let bookRepository: WBookRepositoryType
     private let mutableComments = MutableProperty<[Comment]>([])
     public let comments : Property<[Comment]>
