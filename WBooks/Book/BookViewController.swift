@@ -18,7 +18,7 @@ class BookViewController: UIViewController {
     private let viewModel: BookViewModel
     public let book: Book
     
-    private static let statusBarTitle = "ADD NEW BOOK"
+    private static let statusBarTitle = "BOOK DETAIL"
     private static let imagePlaceholder = "image_placeholder"
     private static let userPlaceholder = "user_placeholder"
     private static let cellId = "book_view_cell_id"
