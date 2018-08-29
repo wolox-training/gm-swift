@@ -15,7 +15,7 @@ class BookView: UIView, NibLoadable {
     // MARK: - Properties
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var detailsView: DetailsView!
-    @IBOutlet weak var suggestionContainer: UIView!
+    @IBOutlet weak var suggestionContainer: SuggestionCollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,8 +28,6 @@ class BookView: UIView, NibLoadable {
 private extension BookView {
     
     func setupView() {
-        detailsView.firstButton.setTitle("ADD TO WISHLIST", for: .normal)
-        detailsView.secondButton.setTitle("RENT", for: .normal)
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     

@@ -14,9 +14,9 @@ import WolmoCore
 
 class BookViewController: UIViewController {
     
-    private let bookView: BookView = BookView.loadFromNib()!
+    internal let bookView: BookView = BookView.loadFromNib()!
+    internal let viewModel: BookViewModel
     public let book: Book
-    private let viewModel: BookViewModel
     
     private static let imagePlaceholder = "image_placeholder"
     private static let userPlaceholder = "user_placeholder"
@@ -63,6 +63,7 @@ private extension BookViewController {
     
     func setupView() {
         setNavigationBar()
+        setButtons()
         setBookDetails()
         setSuggestionCollection()
     }
@@ -82,6 +83,11 @@ private extension BookViewController {
         bookView.detailsView.author.text = book.author
         bookView.detailsView.genre.text = book.genre
         bookView.detailsView.year.text = book.year
+    }
+    
+    func setButtons() {
+        bookView.detailsView.firstButton.setTitle("ADD TO WISHLIST", for: .normal)
+        bookView.detailsView.secondButton.setTitle("RENT", for: .normal)
     }
     
     func setSuggestionCollection() {
@@ -122,7 +128,7 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
 
 
 // MARK: - Bindings
-private extension BookViewController {
+internal extension BookViewController {
     
     func setupBindings() {
         viewModel.comments.producer.startWithValues { [unowned self] _ in

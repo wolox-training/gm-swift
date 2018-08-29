@@ -32,7 +32,7 @@
                                 <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-ff-aBz">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-ff-aBz" customClass="SuggestionCollectionView" customModule="WBooks" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="296" width="354" height="171"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -63,7 +63,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="detailsView" destination="f4p-ku-DZo" id="r4Q-DY-qMS"/>
-                <outlet property="suggestionContainer" destination="dFj-ff-aBz" id="r61-Pc-kPY"/>
+                <outlet property="suggestionContainer" destination="dFj-ff-aBz" id="xWA-S6-ubb"/>
                 <outlet property="tableView" destination="lky-oQ-cTo" id="6yO-mf-4YI"/>
             </connections>
             <point key="canvasLocation" x="26" y="51"/>

@@ -17,6 +17,8 @@ class BookViewModel {
     private let bookRepository: WBookRepositoryType
     private let mutableComments = MutableProperty<[Comment]>([])
     public let comments : Property<[Comment]>
+    private let mutableBookSuggestions = MutableProperty<[Book]>([])
+    public let bookSuggestions : Property<[Book]>
 
     
     init(book: Book, bookRepository: WBookRepositoryType = NetworkingBootstrapper.shared.createWBooksRepository()) {
@@ -27,7 +29,16 @@ class BookViewModel {
         mutableComments <~ bookRepository.fetchComments(book: book)
             .flatMapError { _ in SignalProducer<[Comment], NoError>.empty }
         
+        
+        // TODO: Cambiar este libro por el ultimo libro alquilado
+        let book = Book(id: 20, author: "", title: "", imageURL: nil, year: "", genre: "")
+        
+        bookSuggestions = Property(mutableBookSuggestions)
+        mutableBookSuggestions <~ bookRepository.fetchBookSuggestions(book: book)
+            .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
+        
     }
+    
     
     /*
     func getComments() -> [Comment] {

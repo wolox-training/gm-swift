@@ -35,7 +35,6 @@ class RentalsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         rentalsView.rentsTableView.delegate = self
         rentalsView.rentsTableView.dataSource = self
         rentalsView.rentsTableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: RentalsViewController.tableCellId)
@@ -76,7 +75,10 @@ extension RentalsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rent: Rent = viewModel.rents.value[indexPath.row]
-        print("Row selected! Item: \(rent)")
+        let book: Book = rent.book
+        let rentedBookViewModel: RentedBookViewModel = viewModel.createRentedBookViewModel(book: book)
+        let rentedBookViewController = RentedBookViewController(book: book, viewModel: rentedBookViewModel)
+        navigationController?.pushViewController(rentedBookViewController, animated: true)
     }
     
 }
