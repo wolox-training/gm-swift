@@ -22,7 +22,7 @@
                         <constraint firstAttribute="height" constant="115" id="Z9i-Qs-8lm"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-DS-sx5">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QRP-DS-sx5">
                     <rect key="frame" x="30" y="139" width="354" height="597"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4p-ku-DZo" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
@@ -32,11 +32,22 @@
                                 <constraint firstAttribute="height" constant="280" id="idw-Jv-WOg"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-ff-aBz">
+                            <rect key="frame" x="0.0" y="296" width="354" height="171"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="171" id="IKC-Dd-Z7m"/>
+                            </constraints>
+                        </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lky-oQ-cTo">
-                            <rect key="frame" x="0.0" y="304" width="354" height="293"/>
+                            <rect key="frame" x="0.0" y="483" width="354" height="114"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="dFj-ff-aBz" secondAttribute="trailing" id="9hr-NP-uUy"/>
+                        <constraint firstItem="dFj-ff-aBz" firstAttribute="leading" secondItem="QRP-DS-sx5" secondAttribute="leading" id="kDI-O4-Grg"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,6 +63,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="detailsView" destination="f4p-ku-DZo" id="r4Q-DY-qMS"/>
+                <outlet property="suggestionContainer" destination="dFj-ff-aBz" id="r61-Pc-kPY"/>
                 <outlet property="tableView" destination="lky-oQ-cTo" id="6yO-mf-4YI"/>
             </connections>
             <point key="canvasLocation" x="26" y="51"/>
