@@ -16,30 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-iE-V7F">
-                    <rect key="frame" x="16" y="496.5" width="343" height="170"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suggestions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-5K-0uW">
-                            <rect key="frame" x="0.0" y="0.0" width="343" height="24"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="R5l-y5-UI9">
-                            <rect key="frame" x="0.0" y="40" width="343" height="130"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="130" id="jYQ-dp-7FJ"/>
-                            </constraints>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fxq-bt-XZI">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
-                    </subviews>
-                </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3A8-vJ-shv">
                     <rect key="frame" x="16" y="115" width="343" height="365"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,24 +26,31 @@
                         <constraint firstAttribute="height" constant="115" id="HqT-fm-rT0"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcv-2V-ezc" customClass="SuggestionCollectionView" customModule="WBooks" customModuleProvider="target">
+                    <rect key="frame" x="16" y="496" width="343" height="171"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="171" id="CX1-QE-joV"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lcv-2V-ezc" secondAttribute="trailing" constant="16" id="8Kr-Jb-S7e"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3A8-vJ-shv" secondAttribute="trailing" constant="16" id="9mZ-Rs-3dB"/>
                 <constraint firstItem="VSA-Mt-sVd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LiN-h9-PZN"/>
                 <constraint firstItem="VSA-Mt-sVd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QFV-aD-3LU"/>
                 <constraint firstItem="3A8-vJ-shv" firstAttribute="top" secondItem="VSA-Mt-sVd" secondAttribute="bottom" id="Qtf-Za-K1u"/>
+                <constraint firstItem="Lcv-2V-ezc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fL2-V8-LvJ"/>
                 <constraint firstItem="3A8-vJ-shv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="gc5-ec-Yxj"/>
-                <constraint firstAttribute="trailing" secondItem="CW3-iE-V7F" secondAttribute="trailing" constant="16" id="hJZ-0r-upQ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CW3-iE-V7F" secondAttribute="bottom" id="ibT-Ao-L0h"/>
+                <constraint firstItem="Lcv-2V-ezc" firstAttribute="top" secondItem="3A8-vJ-shv" secondAttribute="bottom" constant="16" id="hCF-pg-sU9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VSA-Mt-sVd" secondAttribute="trailing" id="kMu-am-ekY"/>
-                <constraint firstItem="CW3-iE-V7F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="ke1-jI-ZjP"/>
-                <constraint firstItem="CW3-iE-V7F" firstAttribute="top" secondItem="3A8-vJ-shv" secondAttribute="bottom" constant="16" id="zTP-Gb-WO5"/>
+                <constraint firstItem="Lcv-2V-ezc" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="y3u-zz-dS4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="rentsTableView" destination="3A8-vJ-shv" id="0Ly-zm-19c"/>
-                <outlet property="suggestionCollectionView" destination="R5l-y5-UI9" id="5wX-Wz-cc9"/>
+                <outlet property="suggestionContainer" destination="Lcv-2V-ezc" id="gkk-eh-Skb"/>
             </connections>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

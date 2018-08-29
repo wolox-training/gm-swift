@@ -40,9 +40,9 @@ class RentalsViewController: UIViewController {
         rentalsView.rentsTableView.dataSource = self
         rentalsView.rentsTableView.register(UINib(nibName: "LibraryCell", bundle: nil), forCellReuseIdentifier: RentalsViewController.tableCellId)
         
-        rentalsView.suggestionCollectionView.delegate = self
-        rentalsView.suggestionCollectionView.dataSource = self
-        rentalsView.suggestionCollectionView.register(UINib(nibName: RentalsViewController.collectionCellId, bundle: nil), forCellWithReuseIdentifier: RentalsViewController.collectionCellId)
+        rentalsView.suggestionContainer.suggestionCollection.delegate = self
+        rentalsView.suggestionContainer.suggestionCollection.dataSource = self
+        rentalsView.suggestionContainer.suggestionCollection.register(UINib(nibName: RentalsViewController.collectionCellId, bundle: nil), forCellWithReuseIdentifier: RentalsViewController.collectionCellId)
         
         setupBindings()
     }
@@ -137,7 +137,7 @@ private extension RentalsViewController {
     
     func setupBindings() {
         viewModel.bookSuggestions.producer.startWithValues { [unowned self] _ in
-            self.rentalsView.suggestionCollectionView.reloadData()
+            self.rentalsView.suggestionContainer.suggestionCollection.reloadData()
         }
         
         viewModel.rents.producer.startWithValues { [unowned self] _ in
