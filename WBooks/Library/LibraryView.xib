@@ -30,8 +30,8 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4fP-aA-8Vy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="19q-gT-lpM"/>
+                <constraint firstItem="GRc-dk-7Cx" firstAttribute="top" secondItem="4fP-aA-8Vy" secondAttribute="bottom" id="DMn-dc-fQl"/>
                 <constraint firstItem="GRc-dk-7Cx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="KN3-xX-JWv"/>
-                <constraint firstItem="GRc-dk-7Cx" firstAttribute="top" secondItem="4fP-aA-8Vy" secondAttribute="bottom" id="Qu0-5G-jTz"/>
                 <constraint firstItem="4fP-aA-8Vy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="YSh-0Y-k6q"/>
                 <constraint firstItem="4fP-aA-8Vy" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bYq-iK-J4Q"/>
                 <constraint firstItem="GRc-dk-7Cx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qrB-nE-3so"/>
@@ -41,7 +41,7 @@
             <connections>
                 <outlet property="tableView" destination="GRc-dk-7Cx" id="yLi-jP-JtX"/>
             </connections>
-            <point key="canvasLocation" x="24.5" y="51.5"/>
+            <point key="canvasLocation" x="-75" y="28"/>
         </view>
     </objects>
     <resources>

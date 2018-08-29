@@ -30,6 +30,21 @@ class WishlistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
+    }
+}
+
+private extension WishlistViewController {
+    
+    private static let statusBarTitle = "WISHLIST"
+    
+    func setupView() {
+        navigationItem.title = WishlistViewController.statusBarTitle
     }
     
 }

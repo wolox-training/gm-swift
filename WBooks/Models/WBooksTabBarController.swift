@@ -14,16 +14,21 @@ class WBooksTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupView()
         setupTabs()
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
         setNavigationBarStyle()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
 }
 
 // MARK: - Private
@@ -51,19 +56,10 @@ private extension WBooksTabBarController {
         let rentalsTab = UITabBarItem(title: "Rentals", image: UIImage(named: "ic_myrentals"), selectedImage: UIImage(named:"ic_myrentals active"))
         rentalsViewController.tabBarItem = rentalsTab
         
-        
         let tabBarList = [libraryViewController, wishlistViewController, addNewViewController, rentalsViewController]
-        viewControllers = tabBarList
-        navigationItem.title = tabBarList.first!.tabBarItem.title?.uppercased()
+        viewControllers = tabBarList.map { UINavigationController(rootViewController: $0) }
     }
     
     
 }
 
-internal extension WBooksTabBarController {
-    
-    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        navigationItem.title = item.title?.uppercased()
-    }
-    
-}

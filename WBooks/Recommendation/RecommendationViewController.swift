@@ -37,13 +37,20 @@ class RecommendationViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNavigationBarStyle()
+    }
 }
 
 
 // MARK: - Private
 private extension RecommendationViewController {
     
+    private static let statusBarTitle = "ADD NEW BOOK"
+    
     func setupView() {
+        navigationItem.title = RecommendationViewController.statusBarTitle
         recommendationView.imagePickerButton.addTarget(self, action: #selector(imagePickerClicked(sender:)), for: .touchUpInside)
     }
     
@@ -54,7 +61,7 @@ private extension RecommendationViewController {
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
             
-            present(imagePicker, animated: true, completion: nil)
+            tabBarController?.present(imagePicker, animated: true, completion: nil)
         }
     }
     
