@@ -111,6 +111,13 @@ extension RentalsViewController: UICollectionViewDelegate, UICollectionViewDataS
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let book: Book = viewModel.bookSuggestions.value[indexPath.row]
+        let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
+        let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
+        navigationController?.pushViewController(bookViewController, animated: true)
+    }
 }
 
 

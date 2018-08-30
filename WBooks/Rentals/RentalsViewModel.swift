@@ -42,6 +42,9 @@ class RentalsViewModel {
     func createRentedBookViewModel(book: Book) -> RentedBookViewModel {
         return RentedBookViewModel(book: book)
     }
-
+    
+    func createBookViewModel(book: Book) -> BookViewModel {
+        return BookViewModel(book: book)
+    }
 }
 

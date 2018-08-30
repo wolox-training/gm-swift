@@ -20,8 +20,8 @@ public extension UIImageView {
             _ in SignalProducer<UIImage, NoError>.empty
         }
         
-        signalProducer.startWithValues { [unowned self] loadedImage in
-            self.image = loadedImage
+        signalProducer.startWithValues { [weak self] loadedImage in
+            self?.image = loadedImage
         }
     }
 }
