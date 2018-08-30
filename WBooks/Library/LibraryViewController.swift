@@ -144,6 +144,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 
+// MARK: - UISearchBarDelegate
 extension LibraryViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
