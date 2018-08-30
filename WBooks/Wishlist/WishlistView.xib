@@ -23,22 +23,33 @@
                     </constraints>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-8n-pbs">
-                    <rect key="frame" x="16" y="115" width="343" height="552"/>
+                    <rect key="frame" x="16" y="115" width="343" height="406"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNU-bb-1ko" customClass="SuggestionCollectionView" customModule="WBooks" customModuleProvider="target">
+                    <rect key="frame" x="16" y="537" width="343" height="130"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="D4z-Xg-Jg2"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3hB-8n-pbs" secondAttribute="trailing" constant="16" id="8L0-p3-R1K"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cNU-bb-1ko" secondAttribute="trailing" constant="16" id="9oE-Ef-VVz"/>
                 <constraint firstItem="l82-fP-Ppr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A2t-6S-G0g"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="cNU-bb-1ko" secondAttribute="bottom" id="JUu-9Q-VVB"/>
                 <constraint firstItem="3hB-8n-pbs" firstAttribute="top" secondItem="l82-fP-Ppr" secondAttribute="bottom" id="K06-ad-c3z"/>
                 <constraint firstItem="3hB-8n-pbs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="TUh-et-lpJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l82-fP-Ppr" secondAttribute="trailing" id="UEC-GE-uXq"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3hB-8n-pbs" secondAttribute="bottom" id="VAC-bc-ctp"/>
+                <constraint firstItem="cNU-bb-1ko" firstAttribute="top" secondItem="3hB-8n-pbs" secondAttribute="bottom" constant="16" id="Zma-Fo-JgY"/>
+                <constraint firstItem="cNU-bb-1ko" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fj9-fV-nve"/>
                 <constraint firstItem="l82-fP-Ppr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yM5-H8-J2h"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="suggestionContainer" destination="cNU-bb-1ko" id="UfX-wt-XYP"/>
                 <outlet property="tableView" destination="3hB-8n-pbs" id="TPt-Rh-u72"/>
             </connections>
             <point key="canvasLocation" x="24.5" y="52.5"/>
