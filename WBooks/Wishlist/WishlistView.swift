@@ -12,6 +12,10 @@ import WolmoCore
 
 class WishlistView: UIView, NibLoadable {
     
+    // MARK: - Properties
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var suggestionContainer: SuggestionCollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
@@ -23,7 +27,7 @@ class WishlistView: UIView, NibLoadable {
 private extension WishlistView {
     
     func setupView() {
-        
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     }
     
 }

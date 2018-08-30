@@ -41,7 +41,8 @@ class RentalsViewController: UIViewController {
         
         rentalsView.suggestionContainer.suggestionCollection.delegate = self
         rentalsView.suggestionContainer.suggestionCollection.dataSource = self
-        rentalsView.suggestionContainer.suggestionCollection.register(UINib(nibName: RentalsViewController.collectionCellId, bundle: nil), forCellWithReuseIdentifier: RentalsViewController.collectionCellId)
+        rentalsView.suggestionContainer.suggestionCollection.register(UINib(nibName: RentalsViewController.collectionCellId, bundle: nil),
+                                                                      forCellWithReuseIdentifier: RentalsViewController.collectionCellId)
         
         setupBindings()
     }
@@ -88,11 +89,11 @@ extension RentalsViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension RentalsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private static let rentalListMaxSize = 5
+    private static let suggestionListMaxSize = 5
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let count = viewModel.bookSuggestions.value.count
-        return min(count, RentalsViewController.rentalListMaxSize)
+        return min(count, RentalsViewController.suggestionListMaxSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
