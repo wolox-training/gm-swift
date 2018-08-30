@@ -12,12 +12,10 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel: LibraryViewModel
     private var searchBar: UISearchBar
-    private var searchActive: Bool = false
-    private var filteredBooks = [Book]()
     
     private static let cellId = "library_view_cell_id"
     private static let imagePlaceholder = "image_placeholder"
@@ -109,14 +107,14 @@ private extension LibraryViewController {
 extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let bookList = getBookList()
+        let bookList = viewModel.getBooks().value
         return bookList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LibraryViewController.cellId) as! LibraryCell
         
-        let bookList = getBookList()
+        let bookList = viewModel.getBooks().value
         let book = bookList[indexPath.row]
         
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
@@ -128,7 +126,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         cell.libraryTitle?.text = book.title
         cell.libraryAuthor?.text = book.author
         
-        if !searchActive && indexPath.row == viewModel.books.value.count - 1 {
+        if indexPath.row == viewModel.books.value.count - 1 {
             viewModel.fetchMoreBooks()
         }
         
@@ -136,19 +134,11 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let bookList = getBookList()
+        let bookList = viewModel.getBooks().value
         let book = bookList[indexPath.row]
         let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
         let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
         tabBarController?.navigationController?.pushViewController(bookViewController, animated: true)
-    }
-    
-    func getBookList() -> [Book] {
-        if searchActive {
-            return filteredBooks
-        } else {
-            return viewModel.books.value
-        }
     }
     
 }
@@ -160,20 +150,12 @@ extension LibraryViewController: UISearchBarDelegate {
         searchBar.text = .none
         self.searchBar(searchBar, textDidChange: searchBar.text!)
         searchBar.endEditing(true)
-        searchActive = false;
         hideSearchBar()
         showSearchButton()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredBooks = viewModel.books.value.filter({ (book: Book) -> Bool in
-            return book.title.lowercased().contains(searchText.lowercased()) ||
-                book.author.lowercased().contains(searchText.lowercased())
-        })
-        
-        searchActive = searchText.isNotEmpty
-        libraryView.tableView.reloadData()
+        viewModel.filterBooks(searchText: searchText)
     }
     
 }
@@ -184,6 +166,10 @@ private extension LibraryViewController {
     
     func setupBindings() {
         viewModel.books.producer.startWithValues { [unowned self] _ in
+            self.libraryView.tableView.reloadData()
+        }
+        
+        viewModel.filteredBooks.producer.startWithValues { [unowned self] _ in
             self.libraryView.tableView.reloadData()
         }
     }

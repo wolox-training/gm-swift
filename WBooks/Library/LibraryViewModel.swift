@@ -13,14 +13,17 @@ import Result
 
 class LibraryViewModel {
     
+    private let bookRepository: WBookRepositoryType
     private let mutableBooks = MutableProperty<[Book]>([])
     public let books : Property<[Book]>
+    private let mutableFilteredBooks = MutableProperty<[Book]>([])
+    public let filteredBooks : Property<[Book]>
     
+    public var searchActive: Bool = false
     private var thereAreMoreBooks = true
     private var page = 1
     private static let amountPerPage = 20
     
-    private let bookRepository: WBookRepositoryType
     
     init(bookRepository: WBookRepositoryType = NetworkingBootstrapper.shared.createWBooksRepository()) {
         self.bookRepository = bookRepository
@@ -29,10 +32,11 @@ class LibraryViewModel {
         mutableBooks <~ bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         
+        filteredBooks = Property(mutableFilteredBooks)
     }
     
     func fetchMoreBooks() {
-        if thereAreMoreBooks {
+        if !searchActive && thereAreMoreBooks {
             page += 1
 
             let signalProducer: SignalProducer<[Book], NoError> = bookRepository.fetchEntities(page: page, amount: LibraryViewModel.amountPerPage)
@@ -49,4 +53,21 @@ class LibraryViewModel {
         return BookViewModel(book: book)
     }
     
+    func filterBooks(searchText: String) {
+        searchActive = searchText.isNotEmpty
+        
+        mutableFilteredBooks.value = books.value.filter({ (book: Book) -> Bool in
+            return book.title.lowercased().contains(searchText.lowercased()) ||
+                book.author.lowercased().contains(searchText.lowercased())
+        })
+    }
+    
+    
+    func getBooks() -> Property<[Book]> {
+        if searchActive {
+            return filteredBooks
+        } else {
+            return books
+        }
+    }
 }

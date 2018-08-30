@@ -12,7 +12,7 @@ import WolmoCore
 
 class BookView: UIView, NibLoadable {
 
-    // MARK: Properties
+    // MARK: - Properties
     @IBOutlet weak var bookPhoto: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookStatus: UILabel!

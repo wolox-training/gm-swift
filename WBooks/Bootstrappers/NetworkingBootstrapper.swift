@@ -44,7 +44,7 @@ class NetworkingBootstrapper {
 
 }
 
-// MARK: Private Methods
+// MARK: - Private Methods
 fileprivate extension NetworkingBootstrapper {
 
     func enableAlamofireNetworkActivityLogger() {
