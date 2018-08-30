@@ -79,9 +79,11 @@ extension WishlistViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement 'didSelectRowAt'
         let wish: Wish = viewModel.wishes.value[indexPath.row]
-        print("Wish selected! \(wish)")
+        let book: Book = wish.book
+        let wishedBookViewModel: WishedBookViewModel = viewModel.createWishedBookViewModel(book: book)
+        let wishedBookViewController = WishedBookViewController(book: book, viewModel: wishedBookViewModel)
+        navigationController?.pushViewController(wishedBookViewController, animated: true)
     }
     
 }

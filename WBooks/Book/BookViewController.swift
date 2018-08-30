@@ -98,11 +98,11 @@ class BookViewController: UIViewController {
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
-    private static let rentalListMaxSize = 5
+    private static let suggestionListMaxSize = 5
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let count = viewModel.bookSuggestions.value.count
-        return min(count, BookViewController.rentalListMaxSize)
+        return min(count, BookViewController.suggestionListMaxSize)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

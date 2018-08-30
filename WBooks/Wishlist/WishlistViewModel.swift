@@ -39,14 +39,20 @@ class WishlistViewModel {
             .flatMapError { _ in SignalProducer<[Wish], NoError>.empty }
     }
     
+    
+    func createWishedBookViewModel(book: Book) -> WishedBookViewModel {
+        return WishedBookViewModel(book: book)
+    }
+    
+    
     func getMockWishes() -> [Wish] {
         let book = Book(
-            id: 22,
-            author: "Kyle Simpson",
-            title: "You Don't Know JS: this & Object Prototypes",
-            imageURL: "http://wolox-training.s3.amazonaws.com/uploads/1405902720_9d6c413d202ae89871da885e82fae589.jpg",
-            year: "2014",
-            genre: "programming"
+            id: 3,
+            author: "Lois Duncan",
+            title: "Locked in time",
+            imageURL: "http://wolox-training.s3.amazonaws.com/uploads/6942334-M.jpg",
+            year: "1985",
+            genre: "suspense"
         )
         
         let user = User(id: 54, firstName: "", lastName: "", imageURL: nil)
