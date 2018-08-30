@@ -20,6 +20,7 @@ class WishlistViewModel {
     
     private let bookRepository: WBookRepositoryType
     
+    
     init(bookRepository: WBookRepositoryType = NetworkingBootstrapper.shared.createWBooksRepository()) {
         self.bookRepository = bookRepository
         
@@ -30,16 +31,12 @@ class WishlistViewModel {
         mutableBookSuggestions <~ bookRepository.fetchBookSuggestions(book: book)
             .flatMapError { _ in SignalProducer<[Book], NoError>.empty }
         
-        wishes = Property(mutableWishes)
-        mutableWishes.value = getMockWishes()
-        
         // TODO: Cambiar este usuario por el actualmente logueado
-        //let user = User(id: 54, firstName: "", lastName: "", imageURL: nil)
+        let user = User(id: 54, firstName: "", lastName: "", imageURL: nil)
         
-        /*
+        wishes = Property(mutableWishes)
         mutableWishes <~ bookRepository.fetchWishes(user: user)
             .flatMapError { _ in SignalProducer<[Wish], NoError>.empty }
-        */
     }
     
     func getMockWishes() -> [Wish] {
