@@ -12,8 +12,9 @@ import WolmoCore
 
 class RentalsView: UIView, NibLoadable {
     
+    // MARK: - Properties
     @IBOutlet weak var rentsTableView: UITableView!
-    @IBOutlet weak var suggestionCollectionView: UICollectionView!
+    @IBOutlet weak var suggestionContainer: SuggestionCollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
