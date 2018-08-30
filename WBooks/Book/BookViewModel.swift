@@ -36,4 +36,8 @@ class BookViewModel {
         
     }
     
+    func createCommentViewModel(book: Book) -> CommentViewModel {
+        return CommentViewModel(book: book)
+    }
+    
 }

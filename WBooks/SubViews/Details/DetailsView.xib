@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
             <connections>
                 <outlet property="author" destination="WiH-HG-CBU" id="Lzy-RP-r0w"/>
+                <outlet property="buttonContainer" destination="ub1-Lt-032" id="R7c-XC-4hu"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="p2i-au-bo7"/>
                 <outlet property="firstButton" destination="436-uS-gJi" id="V7i-LJ-nFr"/>
                 <outlet property="genre" destination="VjV-8q-Mqa" id="CDb-5L-CY7"/>
@@ -101,7 +102,6 @@
                 <constraint firstItem="82n-YN-h3B" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZdE-Gs-t2D"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ub1-Lt-032" secondAttribute="trailing" id="dQo-xb-fog"/>
                 <constraint firstItem="82n-YN-h3B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="eIW-2C-k68"/>
-                <constraint firstItem="ub1-Lt-032" firstAttribute="top" secondItem="82n-YN-h3B" secondAttribute="bottom" constant="24" id="jT8-FC-3pc"/>
                 <constraint firstItem="ub1-Lt-032" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="y6y-QL-poe"/>
                 <constraint firstItem="kWS-Ik-Sey" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yhd-6C-OP9"/>
             </constraints>

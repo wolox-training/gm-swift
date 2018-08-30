@@ -77,7 +77,7 @@ extension RentalsViewController: UITableViewDataSource, UITableViewDelegate {
         let rent: Rent = viewModel.rents.value[indexPath.row]
         let book: Book = rent.book
         let rentedBookViewModel: RentedBookViewModel = viewModel.createRentedBookViewModel(book: book)
-        let rentedBookViewController = RentedBookViewController(book: book, viewModel: rentedBookViewModel)
+        let rentedBookViewController = RentedBookViewController(viewModel: rentedBookViewModel)
         navigationController?.pushViewController(rentedBookViewController, animated: true)
     }
     

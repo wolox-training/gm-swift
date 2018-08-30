@@ -78,7 +78,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book: Book = viewModel.books.value[indexPath.row]
         let bookViewModel: BookViewModel = viewModel.createBookViewModel(book: book)
-        let bookViewController = BookViewController(book: book, viewModel: bookViewModel)
+        let bookViewController = BookViewController(viewModel: bookViewModel)
         navigationController?.pushViewController(bookViewController, animated: true)
     }
     

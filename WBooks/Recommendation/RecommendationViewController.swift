@@ -11,7 +11,6 @@ import UIKit
 import ReactiveSwift
 import WolmoCore
 
-
 class RecommendationViewController: UIViewController {
     
     private let recommendationView: RecommendationView = RecommendationView.loadFromNib()!
