@@ -14,16 +14,17 @@ import WolmoCore
 
 class BookViewController: UIViewController {
     
-    private let bookView: BookView = BookView.loadFromNib()!
-    public let book: Book
+    internal let bookView: BookView = BookView.loadFromNib()!
     private let viewModel: BookViewModel
     
+    private static let statusBarTitle = "BOOK DETAIL"
     private static let imagePlaceholder = "image_placeholder"
     private static let userPlaceholder = "user_placeholder"
     private static let cellId = "book_view_cell_id"
+    private static let collectionCellId = "SuggestionCell"
+    
     
     init(book: Book, viewModel: BookViewModel) {
-        self.book = book
         self.viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }
@@ -42,8 +43,12 @@ class BookViewController: UIViewController {
         
         bookView.tableView.delegate = self
         bookView.tableView.dataSource = self
-        
         bookView.tableView.register(UINib(nibName: "CommentCell", bundle: nil), forCellReuseIdentifier: BookViewController.cellId)
+        
+        bookView.suggestionContainer.suggestionCollection.delegate = self
+        bookView.suggestionContainer.suggestionCollection.dataSource = self
+        bookView.suggestionContainer.suggestionCollection.register(UINib(nibName: BookViewController.collectionCellId, bundle: nil),
+                                                                   forCellWithReuseIdentifier: BookViewController.collectionCellId)
         
         setupBindings()
     }
@@ -53,28 +58,92 @@ class BookViewController: UIViewController {
         setNavigationBarStyle()
     }
     
-}
-
-//MARK: - Private
-private extension BookViewController {
     
-    private static let statusBarTitle = "ADD NEW BOOK"
+    internal func setupView() {
+        setNavigationBar()
+        setButtons()
+        setBookDetails()
+        setSuggestionCollection()
+    }
     
-    func setupView() {
+    internal func setNavigationBar() {
         navigationItem.title = BookViewController.statusBarTitle
-        bookView.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
+    }
+    
+    internal func setBookDetails() {
+        bookView.detailsView.photo.image = UIImage(named: BookViewController.imagePlaceholder)
         
+        let book = viewModel.book
         if let url = book.imageURL {
-            bookView.bookPhoto.load(url: url)
+            bookView.detailsView.photo.load(url: url)
         }
         
-        bookView.bookTitle.text = book.title
-        bookView.bookAuthor.text = book.author
-        bookView.bookGenre.text = book.genre
-        bookView.bookYear.text = book.year
+        bookView.detailsView.title.text = book.title
+        bookView.detailsView.author.text = book.author
+        bookView.detailsView.genre.text = book.genre
+        bookView.detailsView.year.text = book.year
+    }
+    
+    internal func setButtons() {
+        bookView.detailsView.firstButton.setTitle("ADD TO WISHLIST", for: .normal)
+        bookView.detailsView.secondButton.setTitle("RENT", for: .normal)
+    }
+    
+    internal func setSuggestionCollection() {
+        bookView.suggestionContainer.isHidden = true
+    }
+}
+
+
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
+extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    private static let rentalListMaxSize = 5
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let count = viewModel.bookSuggestions.value.count
+        return min(count, BookViewController.rentalListMaxSize)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookViewController.collectionCellId, for: indexPath) as! SuggestionCell
+        let book: Book = viewModel.bookSuggestions.value[indexPath.row]
+        
+        cell.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
+        
+        if let url = book.imageURL {
+            cell.bookPhoto.load(url: url)
+        }
+        
+        return cell
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+}
+
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension BookViewController: UICollectionViewDelegateFlowLayout {
+    
+    private static let bookPhotoSize = (width: 52, height: 70)
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let cellWidthPadding = collectionView.frame.size.width / 60
+        let cellHeightPadding: CGFloat = 0
+        return UIEdgeInsets(top: cellHeightPadding, left: cellWidthPadding, bottom: cellHeightPadding, right: cellWidthPadding)
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: BookViewController.bookPhotoSize.width, height: BookViewController.bookPhotoSize.height)
     }
     
 }
+
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension BookViewController: UITableViewDataSource, UITableViewDelegate {
@@ -105,10 +174,15 @@ extension BookViewController: UITableViewDataSource, UITableViewDelegate {
  
 }
 
+
 // MARK: - Bindings
 private extension BookViewController {
     
     func setupBindings() {
+        viewModel.bookSuggestions.producer.startWithValues { [unowned self] _ in
+            self.bookView.suggestionContainer.suggestionCollection.reloadData()
+        }
+        
         viewModel.comments.producer.startWithValues { [unowned self] _ in
             self.bookView.tableView.reloadData()
         }

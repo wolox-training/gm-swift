@@ -12,7 +12,7 @@ import WolmoCore
 
 class LibraryViewController: UIViewController {
     
-    // MARK: Properties
+    // MARK: - Properties
     private let libraryView: LibraryView = LibraryView.loadFromNib()!
     private let viewModel: LibraryViewModel
     
