@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3A8-vJ-shv">
-                    <rect key="frame" x="16" y="115" width="343" height="406"/>
+                    <rect key="frame" x="0.0" y="115" width="375" height="406"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="VSA-Mt-sVd">
@@ -37,12 +37,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lcv-2V-ezc" secondAttribute="trailing" constant="16" id="8Kr-Jb-S7e"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3A8-vJ-shv" secondAttribute="trailing" constant="16" id="9mZ-Rs-3dB"/>
+                <constraint firstItem="3A8-vJ-shv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="BJY-l1-fet"/>
                 <constraint firstItem="VSA-Mt-sVd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LiN-h9-PZN"/>
                 <constraint firstItem="VSA-Mt-sVd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QFV-aD-3LU"/>
                 <constraint firstItem="3A8-vJ-shv" firstAttribute="top" secondItem="VSA-Mt-sVd" secondAttribute="bottom" id="Qtf-Za-K1u"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3A8-vJ-shv" secondAttribute="trailing" id="dgV-L4-I2q"/>
                 <constraint firstItem="Lcv-2V-ezc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fL2-V8-LvJ"/>
-                <constraint firstItem="3A8-vJ-shv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="gc5-ec-Yxj"/>
                 <constraint firstItem="Lcv-2V-ezc" firstAttribute="top" secondItem="3A8-vJ-shv" secondAttribute="bottom" constant="16" id="hCF-pg-sU9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VSA-Mt-sVd" secondAttribute="trailing" id="kMu-am-ekY"/>
                 <constraint firstItem="Lcv-2V-ezc" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="y3u-zz-dS4"/>
