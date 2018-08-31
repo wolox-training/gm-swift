@@ -41,6 +41,9 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-Bg-7Rc">
                             <rect key="frame" x="0.0" y="0.0" width="312" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="6Eb-Ru-nuB"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -70,9 +73,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="140" id="boq-kZ-jxP"/>
-                    </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ub1-Lt-032" userLabel="ButtonStackView">
                     <rect key="frame" x="0.0" y="164" width="422" height="116"/>
