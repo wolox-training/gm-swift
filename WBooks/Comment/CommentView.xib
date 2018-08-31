@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommentView" customModule="WBooks" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bc_nav bar" translatesAutoresizingMaskIntoConstraints="NO" id="1zi-jM-4Dd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="115" id="Dos-ed-6t6"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wy-dC-EG4" customClass="DetailsView" customModule="WBooks" customModuleProvider="target">
+                    <rect key="frame" x="30" y="139" width="354" height="140"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="e6s-SR-LQV"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Rq-fN-cqs" customClass="SimpleTextView" customModule="WBooks" customModuleProvider="target">
+                    <rect key="frame" x="30" y="303" width="354" height="240"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="DbB-Je-MTE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="672-k3-3PF" customClass="GradientButton" customModule="WBooks" customModuleProvider="target">
+                    <rect key="frame" x="30" y="567" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="WEj-OE-C5H"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="672-k3-3PF" secondAttribute="trailing" constant="30" id="4Ru-sj-Bjr"/>
+                <constraint firstItem="7Rq-fN-cqs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="DGi-Ua-SuK"/>
+                <constraint firstItem="1zi-jM-4Dd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RV9-a4-gXC"/>
+                <constraint firstItem="1zi-jM-4Dd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="UTU-bB-khk"/>
+                <constraint firstItem="3wy-dC-EG4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Xx0-XI-sHC"/>
+                <constraint firstItem="672-k3-3PF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="dPE-t5-c3E"/>
+                <constraint firstItem="672-k3-3PF" firstAttribute="top" secondItem="7Rq-fN-cqs" secondAttribute="bottom" constant="24" id="dc7-dA-ELy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3wy-dC-EG4" secondAttribute="trailing" constant="30" id="eI0-lY-uzm"/>
+                <constraint firstItem="1zi-jM-4Dd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iVG-KT-p9S"/>
+                <constraint firstItem="7Rq-fN-cqs" firstAttribute="top" secondItem="3wy-dC-EG4" secondAttribute="bottom" constant="24" id="lfJ-dp-LLr"/>
+                <constraint firstItem="3wy-dC-EG4" firstAttribute="top" secondItem="1zi-jM-4Dd" secondAttribute="bottom" constant="24" id="mdT-k1-RTx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7Rq-fN-cqs" secondAttribute="trailing" constant="30" id="zJk-WC-KWF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="commentTextView" destination="7Rq-fN-cqs" id="4YT-u5-uiI"/>
+                <outlet property="detailsView" destination="3wy-dC-EG4" id="daI-Le-7D6"/>
+                <outlet property="submitButton" destination="672-k3-3PF" id="l3n-fR-Fdc"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bc_nav bar" width="375" height="102"/>
+    </resources>
+</document>

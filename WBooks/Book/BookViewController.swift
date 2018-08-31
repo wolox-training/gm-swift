@@ -15,7 +15,7 @@ import WolmoCore
 class BookViewController: UIViewController {
     
     internal let bookView: BookView = BookView.loadFromNib()!
-    private let viewModel: BookViewModel
+    internal let viewModel: BookViewModel
     
     private static let statusBarTitle = "BOOK DETAIL"
     private static let imagePlaceholder = "image_placeholder"
@@ -24,7 +24,7 @@ class BookViewController: UIViewController {
     private static let collectionCellId = "SuggestionCell"
     
     
-    init(book: Book, viewModel: BookViewModel) {
+    init(viewModel: BookViewModel) {
         self.viewModel = viewModel
         super.init(nibName: .none, bundle: .none)
     }

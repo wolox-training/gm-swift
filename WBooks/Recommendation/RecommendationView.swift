@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import WolmoCore
 
-class RecommendationView: UIView, NibLoadable, UIImagePickerControllerDelegate {
+class RecommendationView: UIView, NibLoadable {
     
     @IBOutlet weak var bookPhoto: UIImageView!
     @IBOutlet weak var bookName: SimpleTextField!
@@ -24,11 +24,6 @@ class RecommendationView: UIView, NibLoadable, UIImagePickerControllerDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
-    }
-    
-    
-    @IBAction func submit(_ sender: Any) {
-        print("Submit button pressed")
     }
     
 }
