@@ -47,9 +47,39 @@ class CommentViewController: UIViewController {
 private extension CommentViewController {
     
     private static let statusBarTitle = "COMMENT"
+    private static let imagePlaceholder = "image_placeholder"
     
     func setupView() {
+        setNavigationBar()
+        setBookDetails()
+        setSubmitButton()
+    }
+    
+    func setNavigationBar() {
         navigationItem.title = CommentViewController.statusBarTitle
+    }
+    
+    func setBookDetails() {
+        let book: Book = viewModel.book
+        
+        commentView.detailsView.photo.image = UIImage(named: CommentViewController.imagePlaceholder)
+        
+        if let url = book.imageURL {
+            commentView.detailsView.photo.load(url: url)
+        }
+        
+        commentView.detailsView.title.text = book.title
+        commentView.detailsView.author.text = book.author
+        commentView.detailsView.year.text = book.year
+        commentView.detailsView.genre.text = book.genre
+    }
+    
+    func setSubmitButton() {
+        commentView.submitButton.addTarget(self, action: #selector(submitButtonClicked(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func submitButtonClicked(sender : UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -59,16 +89,15 @@ extension CommentViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         let textView: SimpleTextView = commentView.commentTextView
         if textView.textColor == UIColor.lightGray {
-            textView.setText(text: "")
+            textView.text = nil
             textView.textColor = UIColor.black
-            
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         let textView: SimpleTextView = commentView.commentTextView
         if textView.text.isEmpty {
-            textView.setPlaceholder(text: SimpleTextView.defaultPlaceholder)
+            textView.text = SimpleTextView.defaultPlaceholder
             textView.textColor = UIColor.lightGray
         }
     }

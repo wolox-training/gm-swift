@@ -32,7 +32,7 @@ private extension SimpleTextView {
         allowsEditingTextAttributes = true
         textContainerInset = UIEdgeInsetsMake(14, 10, 14, 10)
         
-        setPlaceholder(text: SimpleTextView.defaultPlaceholder)
+        text = SimpleTextView.defaultPlaceholder
         textColor = UIColor.lightGray
         
         layer.cornerRadius = 2
@@ -42,24 +42,23 @@ private extension SimpleTextView {
     
 }
 
-extension SimpleTextView {
-    
-    func setText(text: String) {
-        print(">> setText")
-        let fontSize = font!.pointSize
-        let attributes = [NSAttributedStringKey: Any]()
-        
-        attributedText = NSAttributedString(string: text, attributes: attributes)
-    }
-    
-    func setPlaceholder(text: String) {
-        print(">> setPlaceholder")
-        let fontSize = font!.pointSize
-        let attributes = [
-            NSAttributedStringKey.font: UIFont.italicSystemFont(ofSize: fontSize)
-        ]
-        
-        attributedText = NSAttributedString(string: text, attributes: attributes)
-    }
-    
-}
+//extension SimpleTextView {
+//
+//    func setText(text: String) {
+//        let fontSize = font!.pointSize
+//        let attributes = [NSAttributedStringKey: Any]()
+//
+//        attributedText = NSMutableAttributedString(string: text, attributes: attributes)
+//    }
+//
+//    func setPlaceholder(text: String) {
+//        let fontSize = font!.pointSize
+//        let attributes = [
+//            NSAttributedStringKey.font: UIFont.italicSystemFont(ofSize: fontSize)
+//        ]
+//
+//        attributedText = NSMutableAttributedString(string: text, attributes: attributes)
+//    }
+//
+//}
+
