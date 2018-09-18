@@ -27,7 +27,7 @@ class WBookRepository: AbstractRepository, WBookRepositoryType {
     private static let EntitiesPath = "books"
     private static let CommentsPath = "books/$book_id/comments"
     private static let UserRentsPath = "/users/$user_id/rents"
-    private static let BookSuggestionsPath = "suggestions" //"books/$book_id/suggestions"
+    private static let BookSuggestionsPath = "books/$book_id/suggestions"
     private static let PageKey = "page"
     private static let AmountKey = "amount"
     

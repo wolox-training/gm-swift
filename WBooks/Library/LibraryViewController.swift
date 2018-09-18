@@ -62,6 +62,7 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         cell.libraryPhoto?.image = UIImage(named: LibraryViewController.imagePlaceholder)
         
         if let url = book.imageURL {
+            print("URL = \(url)")
             cell.libraryPhoto?.load(url: url)
         }
         

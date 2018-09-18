@@ -10,11 +10,6 @@ import Foundation
 import Networking
 
 struct AuthUser: AuthenticableUser {
-    // swiftlint:disable:next line_length
-    let sessionToken: String? = "Bearer YNdS5PZB5J0am2sWp4tqcl8xdcUBvrIYEBbUrXmctsUYRfgd9LybbwsyGwwO"
-
+    let sessionToken: String? = "Bearer c2gTNiqzdeYsC26eh$k8UZEDn$pi46ItTvKuG$wsRI9FFoynLpF2zZvmiDGF"
 }
 
-/*
- "renew_id": "wW7AyUgFbnvBgTkruDRUWLEQt9a5D3eDNdmkussQFiy55roNvmoEsWvKneBK-3x9"
-*/
