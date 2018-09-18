@@ -63,7 +63,7 @@ extension RentalsViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.libraryPhoto?.image = UIImage(named: RentalsViewController.imagePlaceholder)
         
-        if let url = rent.book.imageURL {
+        if let url = rent.book.imageUrl {
             cell.libraryPhoto?.load(url: url)
         }
         
@@ -101,7 +101,7 @@ extension RentalsViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         cell.bookPhoto.image = UIImage(named: RentalsViewController.imagePlaceholder)
         
-        if let url = book.imageURL {
+        if let url = book.imageUrl {
             cell.bookPhoto.load(url: url)
         }
         

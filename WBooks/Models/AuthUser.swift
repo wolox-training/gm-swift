@@ -10,6 +10,6 @@ import Foundation
 import Networking
 
 struct AuthUser: AuthenticableUser {
-    let sessionToken: String? = "Bearer c2gTNiqzdeYsC26eh$k8UZEDn$pi46ItTvKuG$wsRI9FFoynLpF2zZvmiDGF"
+    let sessionToken: String? = "Bearer 0kTKm4MU72h0bETt1vsGz2y9$LLMcxJ64tluwoHWs!Vp51H2IQmBg9Ee!e86"
 }
 

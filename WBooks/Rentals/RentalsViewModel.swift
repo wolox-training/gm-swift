@@ -24,7 +24,7 @@ class RentalsViewModel {
         self.bookRepository = bookRepository
         
         // TODO: Cambiar este libro por el ultimo libro alquilado
-        let book = Book(id: 1, author: "", title: "", imageURL: nil, year: "", genre: "")
+        let book = Book(id: 1, author: "", title: "", image: nil, year: "", genre: "")
         
         bookSuggestions = Property(mutableBookSuggestions)
         mutableBookSuggestions <~ bookRepository.fetchBookSuggestions(book: book)

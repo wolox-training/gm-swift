@@ -74,7 +74,7 @@ class BookViewController: UIViewController {
         bookView.detailsView.photo.image = UIImage(named: BookViewController.imagePlaceholder)
         
         let book = viewModel.book
-        if let url = book.imageURL {
+        if let url = book.imageUrl {
             bookView.detailsView.photo.load(url: url)
         }
         
@@ -111,7 +111,7 @@ extension BookViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.bookPhoto.image = UIImage(named: BookViewController.imagePlaceholder)
         
-        if let url = book.imageURL {
+        if let url = book.imageUrl {
             cell.bookPhoto.load(url: url)
         }
         

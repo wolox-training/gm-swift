@@ -33,7 +33,7 @@ extension User: Argo.Decodable {
             <^> json <| "id"
             <*> json <| "first_name"
             <*> json <| "last_name"
-            <*> json <|? "image_url"
+            <*> json <|? "image"
     }
 
 }
