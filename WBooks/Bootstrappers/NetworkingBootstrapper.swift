@@ -20,12 +20,12 @@ class NetworkingBootstrapper {
 
     fileprivate let networkingConfiguration: NetworkingConfiguration = {
         var config = NetworkingConfiguration()
-
-        config.useSecureConnection = true
-        config.domainURL = "wbooks-api-stage.herokuapp.com"
-        config.subdomainURL = "/api/v1"
+        
+        config.useSecureConnection = false
+        config.domainURL = "localhost"
+        config.port = 8080
         config.usePinningCertificate = false
-
+        
         return config
     }()
 
