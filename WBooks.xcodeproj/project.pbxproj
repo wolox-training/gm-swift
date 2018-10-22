@@ -14,8 +14,6 @@
 		46BEC9302117C468004338C4 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91B2117BB4A004338C4 /* Curry.framework */; };
 		46BEC9312117C468004338C4 /* KeychainSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC91D2117BB4A004338C4 /* KeychainSwift.framework */; };
 		46BEC9322117C468004338C4 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BEC9262117BDBB004338C4 /* Networking.framework */; };
-		46BEC9332117C468004338C4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A6F1CBED81900E20BE5 /* Nimble.framework */; };
-		46BEC9342117C468004338C4 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1F7A701CBED81900E20BE5 /* Quick.framework */; };
 		46BEC9352117C468004338C4 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40551CB1B939008CE558 /* ReactiveCocoa.framework */; };
 		46BEC9362117C468004338C4 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED934871E8466A60017CF96 /* ReactiveSwift.framework */; };
 		46BEC9372117C468004338C4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D6E40561CB1B93A008CE558 /* Result.framework */; };
@@ -121,8 +119,6 @@
 				46BEC9302117C468004338C4 /* Curry.framework in Frameworks */,
 				46BEC9312117C468004338C4 /* KeychainSwift.framework in Frameworks */,
 				46BEC9322117C468004338C4 /* Networking.framework in Frameworks */,
-				46BEC9332117C468004338C4 /* Nimble.framework in Frameworks */,
-				46BEC9342117C468004338C4 /* Quick.framework in Frameworks */,
 				46BEC9352117C468004338C4 /* ReactiveCocoa.framework in Frameworks */,
 				46BEC9362117C468004338C4 /* ReactiveSwift.framework in Frameworks */,
 				46BEC9372117C468004338C4 /* Result.framework in Frameworks */,
